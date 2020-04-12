@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top.cpp" path="F:\Hardware_Implementation\kernel_matrix_tiled\top.cpp"/>
+    <originFiles name="top_header.hpp" path="F:\Hardware_Implementation\kernel_matrix_tiled\top_header.hpp"/>
+    <originFiles name="top_old.cpp" path="F:\Hardware_Implementation\kernel_matrix_tiled\top_old.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

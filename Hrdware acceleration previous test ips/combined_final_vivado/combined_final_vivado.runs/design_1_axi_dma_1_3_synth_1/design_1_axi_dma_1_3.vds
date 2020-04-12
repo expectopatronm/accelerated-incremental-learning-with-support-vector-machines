@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jul  2 00:16:10 2019
+# Process ID: 13400
+# Current directory: F:/Hardware_Implementation/combined_final_vivado/combined_final_vivado.runs/design_1_axi_dma_1_3_synth_1
+# Command line: vivado.exe -log design_1_axi_dma_1_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_dma_1_3.tcl
+# Log file: F:/Hardware_Implementation/combined_final_vivado/combined_final_vivado.runs/design_1_axi_dma_1_3_synth_1/design_1_axi_dma_1_3.vds
+# Journal file: F:/Hardware_Implementation/combined_final_vivado/combined_final_vivado.runs/design_1_axi_dma_1_3_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_axi_dma_1_3.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Hardware_Implementation/combined_final_hls'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Hardware_Implementation/kernel_matrix_hardware_hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado2019.1/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_dma_1_3, cache-ID = dc24b6fb7fc62dac.
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  2 00:16:17 2019...

@@ -1,0 +1,749 @@
+INFO-FLOW: Workspace F:/Hardware_Implementation/kernel_matrix_tiled/solution1 opened at Thu Jun 20 10:33:04 +0200 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.131 sec.
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.28 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.289 sec.
+Command     ap_source done; 0.295 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.601 sec.
+Execute   set_part xc7z020clg400-1 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'kernel_matrix_tiled/top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling kernel_matrix_tiled/top.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted kernel_matrix_tiled/top.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "kernel_matrix_tiled/top.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E kernel_matrix_tiled/top.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp
+Command       clang done; 3.55 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp"  -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.096 sec.
+INFO-FLOW: GCC PP time: 5 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.041 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/solution1.json 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/solution1.json -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.48 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.diag.yml F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.out.log 2> F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.err.log 
+Command       ap_eval done; 0.708 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.012 sec.
+INFO-FLOW: tidy-3.1 time 3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.089 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.2.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.2.cpp
+Command       clang done; 0.92 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.bc" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.bc
+Command       clang done; 1.418 sec.
+INFO: [HLS 200-10] Analyzing design file 'kernel_matrix_tiled/top_old.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling kernel_matrix_tiled/top_old.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted kernel_matrix_tiled/top_old.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "kernel_matrix_tiled/top_old.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E kernel_matrix_tiled/top_old.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp
+Command       clang done; 0.834 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp"  -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.812 sec.
+INFO-FLOW: GCC PP time: 1 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/solution1.json 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/solution1.json -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/xilinx-dataflow-lawyer.top_old.pp.0.cpp.diag.yml F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/xilinx-dataflow-lawyer.top_old.pp.0.cpp.out.log 2> F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/xilinx-dataflow-lawyer.top_old.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: tidy-3.1 time 0 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.2.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.2.cpp
+Command       clang done; 0.797 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.bc" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.bc
+Command       clang done; 0.789 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top.g.bc F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/top_old.g.bc -hls-opt -except-internalize kernel_matrix_tiled -LE:/Vivado/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 7.776 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 103.129 ; gain = 45.656
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 103.129 ; gain = 45.656
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.pp.bc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.371 sec.
+Execute         llvm-ld F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LE:/Vivado/Vivado/2018.2/win64/lib -lfloatconversion -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.543 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top kernel_matrix_tiled -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.0.bc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'pop_stream' into 'kernel_matrix_tiled' (kernel_matrix_tiled/top.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'pop_stream' into 'kernel_matrix_tiled' (kernel_matrix_tiled/top.cpp:41).
+INFO: [XFORM 203-603] Inlining function 'push_stream' into 'kernel_matrix_tiled' (kernel_matrix_tiled/top.cpp:66).
+Command         transform done; 0.402 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 112.641 ; gain = 55.168
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.1.bc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'rbf_kernel' into 'kernel_matrix_tiled' (kernel_matrix_tiled/top.cpp:57) automatically.
+Command         transform done; 0.188 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.2.prechk.bc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:28 . Memory (MB): peak = 117.289 ; gain = 59.816
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.g.1.bc to F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.o.1.bc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_out_stream.data.V' (kernel_matrix_tiled/top.cpp:7).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_index_stream.data.V' (kernel_matrix_tiled/top.cpp:7).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_in_stream.data.V' (kernel_matrix_tiled/top.cpp:7).
+INFO: [XFORM 203-602] Inlining function 'rbf_kernel' into 'kernel_matrix_tiled' (kernel_matrix_tiled/top.cpp:57) automatically.
+Command         transform done; 0.259 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.o.1.tmp.bc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.15 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 144.219 ; gain = 86.746
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.o.2.bc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1.2' (kernel_matrix_tiled/top.cpp:53:24) in function 'kernel_matrix_tiled' : 
+
+more than one sub loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (kernel_matrix_tiled/top.cpp:47:17) in function 'kernel_matrix_tiled' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (kernel_matrix_tiled/top.cpp:46:16) in function 'kernel_matrix_tiled'.
+Command         transform done; 0.315 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 144.746 ; gain = 87.273
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.325 sec.
+Command     elaborate done; 27.858 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'kernel_matrix_tiled' ...
+Execute       ap_set_top_model kernel_matrix_tiled 
+Execute       get_model_list kernel_matrix_tiled -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model kernel_matrix_tiled 
+Execute       get_model_list kernel_matrix_tiled -filter all-wo-channel 
+INFO-FLOW: Model list for configure: kernel_matrix_tiled
+INFO-FLOW: Configuring Module : kernel_matrix_tiled ...
+Execute       set_default_model kernel_matrix_tiled 
+Execute       apply_spec_resource_limit kernel_matrix_tiled 
+INFO-FLOW: Model list for preprocess: kernel_matrix_tiled
+INFO-FLOW: Preprocessing Module: kernel_matrix_tiled ...
+Execute       set_default_model kernel_matrix_tiled 
+Execute       cdfg_preprocess -model kernel_matrix_tiled 
+Execute       rtl_gen_preprocess kernel_matrix_tiled 
+INFO-FLOW: Model list for synthesis: kernel_matrix_tiled
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_matrix_tiled' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model kernel_matrix_tiled 
+Execute       schedule -model kernel_matrix_tiled 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.2.2'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 16.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.407 sec.
+INFO: [HLS 200-111]  Elapsed time: 29.423 seconds; current allocated memory: 95.308 MB.
+Execute       report -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 1 loops out of a total 7 loops have been pipelined in this design.
+Command       report done; 0.157 sec.
+Execute       db_write -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.sched.adb -f 
+INFO-FLOW: Finish scheduling kernel_matrix_tiled.
+Execute       set_default_model kernel_matrix_tiled 
+Execute       bind -model kernel_matrix_tiled 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=kernel_matrix_tiled
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.104 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.314 seconds; current allocated memory: 96.084 MB.
+Execute       report -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.verbose.bind.rpt -verbose -f 
+Command       report done; 0.107 sec.
+Execute       db_write -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.bind.adb -f 
+INFO-FLOW: Finish binding kernel_matrix_tiled.
+Execute       get_model_list kernel_matrix_tiled -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess kernel_matrix_tiled 
+INFO-FLOW: Model list for RTL generation: kernel_matrix_tiled
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_matrix_tiled' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model kernel_matrix_tiled -vendor xilinx -mg_file F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_in_stream_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_in_stream_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_in_stream_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_in_stream_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_in_stream_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_in_stream_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_in_stream_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_index_stream_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_index_stream_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_index_stream_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_index_stream_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_index_stream_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_index_stream_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_index_stream_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_out_stream_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_out_stream_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_out_stream_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_out_stream_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_out_stream_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_out_stream_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/kernel_out_stream_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix_tiled/length_x' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kernel_matrix_tiled' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' and 'length_x' to AXI-Lite port CONTROL_BUS.
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_input_buf' to 'kernel_matrix_tilbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_index_buf' to 'kernel_matrix_tilcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_temp2_buf' to 'kernel_matrix_tildEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_result_buf' to 'kernel_matrix_tileOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'kernel_matrix_tilfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_fmul_32ns_32ns_32_4_max_dsp_1' to 'kernel_matrix_tilg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_fexp_32ns_32ns_32_9_full_dsp_1' to 'kernel_matrix_tilhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_urem_32ns_8ns_8_36_seq_1' to 'kernel_matrix_tilibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_tiled_mul_mul_7ns_11ns_17_1_1' to 'kernel_matrix_tiljbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_tilfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_tilg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_tilhbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_tilibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_tiljbC': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_matrix_tiled'.
+Command       create_rtl_model done; 0.428 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.606 seconds; current allocated memory: 98.972 MB.
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute       gen_rtl kernel_matrix_tiled -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/syn/systemc/kernel_matrix_tiled -synmodules kernel_matrix_tiled 
+Execute       gen_rtl kernel_matrix_tiled -istop -style xilinx -f -lang vhdl -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/syn/vhdl/kernel_matrix_tiled 
+Execute       gen_rtl kernel_matrix_tiled -istop -style xilinx -f -lang vlog -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/syn/verilog/kernel_matrix_tiled 
+Execute       export_constraint_db -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.constraint.tcl -f -tool general 
+Execute       report -model kernel_matrix_tiled -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.design.xml -verbose -f -dv 
+Execute       report -model kernel_matrix_tiled -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.103 sec.
+Execute       gen_tb_info kernel_matrix_tiled -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled -p F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.124 sec.
+Execute       report -model kernel_matrix_tiled -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/syn/report/kernel_matrix_tiled_csynth.rpt -f 
+Execute       report -model kernel_matrix_tiled -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/syn/report/kernel_matrix_tiled_csynth.xml -f -x 
+Execute       report -model kernel_matrix_tiled -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.verbose.rpt -verbose -f 
+Command       report done; 0.139 sec.
+Execute       db_write -model kernel_matrix_tiled -o F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.adb -f 
+Execute       sc_get_clocks kernel_matrix_tiled 
+Execute       sc_get_portdomain kernel_matrix_tiled 
+INFO-FLOW: Model list for RTL component generation: kernel_matrix_tiled
+INFO-FLOW: Handling components in module [kernel_matrix_tiled] ... 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+INFO-FLOW: Found component kernel_matrix_tilfYi.
+INFO-FLOW: Append model kernel_matrix_tilfYi
+INFO-FLOW: Found component kernel_matrix_tilg8j.
+INFO-FLOW: Append model kernel_matrix_tilg8j
+INFO-FLOW: Found component kernel_matrix_tilhbi.
+INFO-FLOW: Append model kernel_matrix_tilhbi
+INFO-FLOW: Found component kernel_matrix_tilibs.
+INFO-FLOW: Append model kernel_matrix_tilibs
+INFO-FLOW: Found component kernel_matrix_tiljbC.
+INFO-FLOW: Append model kernel_matrix_tiljbC
+INFO-FLOW: Found component kernel_matrix_tilbkb.
+INFO-FLOW: Append model kernel_matrix_tilbkb
+INFO-FLOW: Found component kernel_matrix_tilcud.
+INFO-FLOW: Append model kernel_matrix_tilcud
+INFO-FLOW: Found component kernel_matrix_tileOg.
+INFO-FLOW: Append model kernel_matrix_tileOg
+INFO-FLOW: Found component kernel_matrix_tiled_CONTROL_BUS_s_axi.
+INFO-FLOW: Append model kernel_matrix_tiled_CONTROL_BUS_s_axi
+INFO-FLOW: Append model kernel_matrix_tiled
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: kernel_matrix_tilfYi kernel_matrix_tilg8j kernel_matrix_tilhbi kernel_matrix_tilibs kernel_matrix_tiljbC kernel_matrix_tilbkb kernel_matrix_tilcud kernel_matrix_tileOg kernel_matrix_tiled_CONTROL_BUS_s_axi kernel_matrix_tiled
+INFO-FLOW: To file: write model kernel_matrix_tilfYi
+INFO-FLOW: To file: write model kernel_matrix_tilg8j
+INFO-FLOW: To file: write model kernel_matrix_tilhbi
+INFO-FLOW: To file: write model kernel_matrix_tilibs
+INFO-FLOW: To file: write model kernel_matrix_tiljbC
+INFO-FLOW: To file: write model kernel_matrix_tilbkb
+INFO-FLOW: To file: write model kernel_matrix_tilcud
+INFO-FLOW: To file: write model kernel_matrix_tileOg
+INFO-FLOW: To file: write model kernel_matrix_tiled_CONTROL_BUS_s_axi
+INFO-FLOW: To file: write model kernel_matrix_tiled
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.126 sec.
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.129 sec.
+Command       ap_source done; 0.129 sec.
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'kernel_matrix_tilibs_div'
+INFO: [RTMG 210-278] Implementing memory 'kernel_matrix_tilbkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel_matrix_tilcud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel_matrix_tileOg_ram (RAM)' using block RAMs.
+Execute         source ./CONTROL_BUS.slave.tcl 
+Execute         is_m_axi_addr64 
+Command       ap_source done; 0.455 sec.
+Execute       get_config_sdx -target 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.117 sec.
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.constraint.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.constraint.tcl 
+Execute       sc_get_clocks kernel_matrix_tiled 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/impl/misc/kernel_matrix_tiled_ap_faddfsub_3_full_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/impl/misc/kernel_matrix_tiled_ap_fexp_7_full_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/impl/misc/kernel_matrix_tiled_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:33 . Memory (MB): peak = 154.852 ; gain = 97.379
+INFO: [SYSC 207-301] Generating SystemC RTL for kernel_matrix_tiled.
+INFO: [VHDL 208-304] Generating VHDL RTL for kernel_matrix_tiled.
+INFO: [VLOG 209-307] Generating Verilog RTL for kernel_matrix_tiled.
+Command     autosyn done; 4.123 sec.
+Command   csynth_design done; 31.984 sec.
+Command ap_source done; 32.655 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace F:/Hardware_Implementation/kernel_matrix_tiled/solution1 opened at Thu Jun 20 10:33:43 +0200 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.126 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.128 sec.
+Command     ap_source done; 0.129 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.237 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.117 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.113 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.115 sec.
+Command     ap_source done; 0.116 sec.
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.compgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.constraint.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.constraint.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.constraint.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.constraint.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/kernel_matrix_tiled.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/Hardware_Implementation/kernel_matrix_tiled/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.116 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.119 sec.
+Command     ap_source done; 0.119 sec.
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command   export_design done; 17.51 sec.
+Command ap_source done; 17.751 sec.
+Execute cleanup_all 

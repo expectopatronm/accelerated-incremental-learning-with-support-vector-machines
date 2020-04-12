@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Pre-synthesis failed.&#xD;&#xA;command 'ap_source' returned error code&#xD;&#xA;    while executing&#xD;&#xA;&quot;source F:/Hardware_Implementation/combined_final_hls/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main F:/Hardware_Implementation/combined_final_hls/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:28.495+0200"/>
+        <logs message="ERROR: [XFORM 203-504] Stop unrolling loop 'LOOP_77' (combined_final_hls/top.cpp:121) in function 'accelerator_function' because it may cause large runtime and excessive memory usage due to increase in code size. Please avoid unrolling the loop or form sub-functions for code in the loop body." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:28.156+0200"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'LOOP_R' (combined_final_hls/top.cpp:148) because its parent loop or function is pipelined." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:28.030+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_in_stream.data.V' (combined_final_hls/top.cpp:10)." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:27.985+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_index_stream.data.V' (combined_final_hls/top.cpp:10)." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:27.853+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_out_stream.data.V' (combined_final_hls/top.cpp:10)." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:27.845+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream_predict.data.V' (combined_final_hls/top.cpp:10)." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:27.836+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'supp_vec_stream.data.V' (combined_final_hls/top.cpp:10)." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:27.828+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'dual_coef_stream.data.V' (combined_final_hls/top.cpp:10)." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:27.819+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_stream_predict.data.V' (combined_final_hls/top.cpp:10)." projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:27.811+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file combined_final_hls/top.cpp" projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:25.388+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: combined_final_hls/top.cpp:44:5" projectName="combined_final_hls" solutionName="solution1" date="2019-07-09T20:05:09.051+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"predict_function": {
+			"proto_instances": {
+			}
+		}
+	}
+}

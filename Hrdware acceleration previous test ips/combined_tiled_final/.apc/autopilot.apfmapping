@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top_header.hpp" path="F:\Hardware_Implementation\combined_tiled_final\top_header.hpp"/>
+    <originFiles name="top.cpp" path="F:\Hardware_Implementation\combined_tiled_final\top.cpp"/>
+    <originFiles name="predicl_tiled.cpp" path="F:\Hardware_Implementation\combined_tiled_final\predicl_tiled.cpp"/>
+    <originFiles name="kernel_matrix_tiled.cpp" path="F:\Hardware_Implementation\combined_tiled_final\kernel_matrix_tiled.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

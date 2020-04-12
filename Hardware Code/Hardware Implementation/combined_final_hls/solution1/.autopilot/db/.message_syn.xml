@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;combined_final_hls/top.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 214-114]" key="HLS 214-114" tag="DATAFLOW,SDX_KERNEL" content="Only function calls and local variable declarations are allowed in a dataflow region: combined_final_hls/top.cpp:44:5"/>
+	<Message severity="WARNING" prefix="[HLS 200-471]" key="HLS 200-471" tag="DATAFLOW,SDX_KERNEL" content="Dataflow form checks found 1 issue(s) in file combined_final_hls/top.cpp"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 171.488 ; gain = 81.473"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:29 . Memory (MB): peak = 171.488 ; gain = 81.473"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;pop_stream&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:116)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;pop_stream&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:105)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;pop_stream&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:96)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;pop_stream&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:67)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;pop_stream&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:55)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;rbf_kernel&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:128)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;rbf_kernel&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:70)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;push_stream&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:138)."/>
+	<Message severity="INFO" prefix="[XFORM 203-603]" key="XFORM_INLINE_STATUS_221" tag="" content="Inlining function &apos;push_stream&apos; into &apos;accelerator_function&apos; (combined_final_hls/top.cpp:80)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 171.488 ; gain = 81.473"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 193.242 ; gain = 103.227"/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;out_stream_predict.data.V&apos; (combined_final_hls/top.cpp:10)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;dual_coef_stream.data.V&apos; (combined_final_hls/top.cpp:10)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;supp_vec_stream.data.V&apos; (combined_final_hls/top.cpp:10)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;in_stream_predict.data.V&apos; (combined_final_hls/top.cpp:10)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;kernel_out_stream.data.V&apos; (combined_final_hls/top.cpp:10)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;kernel_index_stream.data.V&apos; (combined_final_hls/top.cpp:10)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-1103]" key="XFORM_DATA_PACK_INVALID_346" tag="" content="Ignored data pack directive on non-struct variable &apos;kernel_in_stream.data.V&apos; (combined_final_hls/top.cpp:10)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;LOOP_88&apos; (combined_final_hls/top.cpp:123) in function &apos;accelerator_function&apos; for pipelining."/>
+	<Message severity="WARNING" prefix="[XFORM 203-505]" key="XFORM_UNROLL_DEAD_PIPELINE_247" tag="" content="Ignored pipeline directive for loop &apos;LOOP_R&apos; (combined_final_hls/top.cpp:148) because its parent loop or function is pipelined."/>
+	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_310" tag="" content="Unrolling loop &apos;LOOP_3&apos; (combined_final_hls/top.cpp:61) in function &apos;accelerator_function&apos; partially with a factor of 50."/>
+	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_310" tag="" content="Unrolling loop &apos;LOOP_77&apos; (combined_final_hls/top.cpp:121) in function &apos;accelerator_function&apos; partially with a factor of 50."/>
+	<Message severity="ERROR" prefix="[XFORM 203-504]" key="XFORM_UNROLL_CODE_SIZE_E_312" tag="LOOP,SDX_LOOP" content="Stop unrolling loop &apos;LOOP_77&apos; (combined_final_hls/top.cpp:121) in function &apos;accelerator_function&apos; because it may cause large runtime and excessive memory usage due to increase in code size. Please avoid unrolling the loop or form sub-functions for code in the loop body."/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1855" tag="" content="Pre-synthesis failed."/>
+</Messages>

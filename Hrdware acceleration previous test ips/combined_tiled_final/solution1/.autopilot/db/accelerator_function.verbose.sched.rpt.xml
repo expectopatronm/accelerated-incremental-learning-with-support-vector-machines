@@ -1,0 +1,266 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'accelerator_function'" level="0">
+<item name = "Date">Tue Jun 25 14:05:37 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">combined_tiled_final</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 7.789, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOOP_1">1568, 1568, 2, -, -, 784, no</column>
+<column name="- LOOP_2">?, ?, 2 ~ 473502, -, -, ?, no</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name=" + LOOP_4">784, 784, 2, 1, 1, 784, yes</column>
+<column name=" + LOOP_5">3930, 3930, 16, 5, 1, 784, yes</column>
+<column name="- LOOP_6">?, ?, 3, -, -, ?, no</column>
+<column name="- LOOP_11">157000, 157000, 1570, -, -, 100, no</column>
+<column name=" + LOOP_22">1568, 1568, 2, -, -, 784, no</column>
+<column name="- LOOP_33">?, ?, 2, -, -, ?, no</column>
+<column name="- LOOP_44">?, ?, 1778 ~ 7249908, -, -, ?, no</column>
+<column name=" + LOOP_55">1570, 15700, 1570, -, -, 1 ~ 10, no</column>
+<column name="  ++ LOOP_66">1568, 1568, 2, -, -, 784, no</column>
+<column name=" + LOOP_77">200, 7234200, 2 ~ 72342, -, -, 100, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="  ++ LOOP_R">7206, 7206, 46, -, -, 156, no</column>
+<column name="- LOOP_99">300, 300, 3, -, -, 100, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

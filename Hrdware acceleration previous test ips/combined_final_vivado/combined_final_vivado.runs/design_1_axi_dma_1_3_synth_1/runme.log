@@ -1,0 +1,17 @@
+
+*** Running vivado
+    with args -log design_1_axi_dma_1_3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_dma_1_3.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_axi_dma_1_3.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Hardware_Implementation/combined_final_hls'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/Hardware_Implementation/kernel_matrix_hardware_hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado2019.1/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_dma_1_3, cache-ID = dc24b6fb7fc62dac.
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  2 00:16:17 2019...

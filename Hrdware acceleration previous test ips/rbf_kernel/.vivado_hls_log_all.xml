@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) (7.26 ns)&#xD;&#xA;&#x9;'fadd' operation ('sum_1', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) (7.26 ns)" projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.738+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (14.512ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.732+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-70] Cannot meet target clock period from 'fadd' operation ('sum_9') to 'fadd' operation ('sum') (combination delay: 16.281 ns) to honor II or Latency constraint in region 'LOOP_12'." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.724+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 0)&#xD;&#xA;   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.701+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 0)&#xD;&#xA;   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.678+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)&#xD;&#xA;   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.656+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)&#xD;&#xA;   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.636+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)&#xD;&#xA;   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.631+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)&#xD;&#xA;   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.624+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'Block_Rbf_kernel_func.exit_proc' to 'Block_Rbf_kernel_fun' (rbf_kernel/top.cpp:56:22)" projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:03.245+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 79 to 78 for loop 'LOOP_12' in function 'rbf_kernel'." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:02.656+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 79 to 78 for loop 'LOOP_12' in function 'rbf_kernel'." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:02.597+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream1.data.V' (rbf_kernel/top.cpp:9)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:16:50.711+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream2.data.V' (rbf_kernel/top.cpp:9)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:16:50.679+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_stream.data.V' (rbf_kernel/top.cpp:9)." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:16:50.672+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: rbf_kernel/top.cpp:17:2" projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:16:49.653+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'rbf_kernel_ap_fsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:59.819+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'rbf_kernel_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:58.488+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'rbf_kernel_ap_fexp_7_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:56.899+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'rbf_kernel_ap_faddfsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:55.357+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'rbf_kernel_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.&#xD;&#xA;create_ip: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 361.352 ; gain = 41.688" projectName="rbf_kernel" solutionName="solution1" date="2019-06-24T13:17:53.826+0200" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

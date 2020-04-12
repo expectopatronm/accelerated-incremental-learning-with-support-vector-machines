@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Jun 20 10:33:46 2019
+# Process ID: 24696
+# Current directory: F:/Hardware_Implementation/kernel_matrix_tiled/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: F:/Hardware_Implementation/kernel_matrix_tiled/solution1/impl/ip/vivado.log
+# Journal file: F:/Hardware_Implementation/kernel_matrix_tiled/solution1/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_matrix_tiled_ap_faddfsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_matrix_tiled_ap_faddfsub_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_matrix_tiled_ap_faddfsub_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_matrix_tiled_ap_fexp_7_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_matrix_tiled_ap_fexp_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_matrix_tiled_ap_fexp_7_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'kernel_matrix_tiled_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'kernel_matrix_tiled_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'kernel_matrix_tiled_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/Vivado/2018.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 10:34:01 2019...

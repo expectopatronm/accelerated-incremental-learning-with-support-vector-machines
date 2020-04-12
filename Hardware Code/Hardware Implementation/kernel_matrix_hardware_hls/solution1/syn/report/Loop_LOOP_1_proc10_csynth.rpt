@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_LOOP_1_proc10'
+================================================================
+* Date:           Thu Aug  1 03:49:12 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        kernel_matrix_hardware_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.634|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  786|  786|  786|  786|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- LOOP_1  |  784|  784|         1|          1|          1|   784|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     43|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    114|    -|
+|Register         |        -|      -|      84|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      84|    157|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |                Variable Name                | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |is_idx1_fu_168_p2                            |     +    |      0|  0|  14|          10|           1|
+    |ap_block_state2                              |    and   |      0|  0|   2|           1|           1|
+    |kernel_index_stream_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |kernel_index_stream_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln39_fu_162_p2                          |   icmp   |      0|  0|  13|          10|           9|
+    |kernel_index_stream_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_state1                              |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                        |          |      0|  0|  43|          26|          15|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                              |  21|          4|    1|          4|
+    |ap_done                                |   9|          2|    1|          2|
+    |is_idx1_0_i_i_i_i_reg_151              |   9|          2|   10|         20|
+    |kernel_index_stream_TDATA_blk_n        |   9|          2|    1|          2|
+    |kernel_index_stream_data_V_0_data_out  |   9|          2|   32|         64|
+    |kernel_index_stream_data_V_0_state     |  15|          3|    2|          6|
+    |kernel_index_stream_dest_V_0_state     |  15|          3|    2|          6|
+    |length_x_out_blk_n                     |   9|          2|    1|          2|
+    |remaining_size_out_blk_n               |   9|          2|    1|          2|
+    |tile_size_out_blk_n                    |   9|          2|    1|          2|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 114|         24|   52|        110|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |   3|   0|    3|          0|
+    |ap_done_reg                             |   1|   0|    1|          0|
+    |is_idx1_0_i_i_i_i_reg_151               |  10|   0|   10|          0|
+    |kernel_index_stream_data_V_0_payload_A  |  32|   0|   32|          0|
+    |kernel_index_stream_data_V_0_payload_B  |  32|   0|   32|          0|
+    |kernel_index_stream_data_V_0_sel_rd     |   1|   0|    1|          0|
+    |kernel_index_stream_data_V_0_sel_wr     |   1|   0|    1|          0|
+    |kernel_index_stream_data_V_0_state      |   2|   0|    2|          0|
+    |kernel_index_stream_dest_V_0_state      |   2|   0|    2|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   |  84|   0|   84|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+----------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |        Source Object       |    C Type    |
++----------------------------+-----+-----+------------+----------------------------+--------------+
+|ap_clk                      |  in |    1| ap_ctrl_hs |     Loop_LOOP_1_proc10     | return value |
+|ap_rst                      |  in |    1| ap_ctrl_hs |     Loop_LOOP_1_proc10     | return value |
+|ap_start                    |  in |    1| ap_ctrl_hs |     Loop_LOOP_1_proc10     | return value |
+|ap_done                     | out |    1| ap_ctrl_hs |     Loop_LOOP_1_proc10     | return value |
+|ap_continue                 |  in |    1| ap_ctrl_hs |     Loop_LOOP_1_proc10     | return value |
+|ap_idle                     | out |    1| ap_ctrl_hs |     Loop_LOOP_1_proc10     | return value |
+|ap_ready                    | out |    1| ap_ctrl_hs |     Loop_LOOP_1_proc10     | return value |
+|kernel_index_stream_TDATA   |  in |   32|    axis    | kernel_index_stream_data_V |    pointer   |
+|kernel_index_stream_TVALID  |  in |    1|    axis    | kernel_index_stream_dest_V |    pointer   |
+|kernel_index_stream_TREADY  | out |    1|    axis    | kernel_index_stream_dest_V |    pointer   |
+|kernel_index_stream_TDEST   |  in |    5|    axis    | kernel_index_stream_dest_V |    pointer   |
+|kernel_index_stream_TSTRB   |  in |    4|    axis    | kernel_index_stream_strb_V |    pointer   |
+|kernel_index_stream_TKEEP   |  in |    4|    axis    | kernel_index_stream_keep_V |    pointer   |
+|kernel_index_stream_TUSER   |  in |    4|    axis    | kernel_index_stream_user_V |    pointer   |
+|kernel_index_stream_TLAST   |  in |    1|    axis    | kernel_index_stream_last_V |    pointer   |
+|kernel_index_stream_TID     |  in |    5|    axis    |  kernel_index_stream_id_V  |    pointer   |
+|index_buf_address0          | out |   10|  ap_memory |          index_buf         |     array    |
+|index_buf_ce0               | out |    1|  ap_memory |          index_buf         |     array    |
+|index_buf_we0               | out |    1|  ap_memory |          index_buf         |     array    |
+|index_buf_d0                | out |   32|  ap_memory |          index_buf         |     array    |
+|length_x                    |  in |   32|   ap_none  |          length_x          |    pointer   |
+|tile_size                   |  in |   32|   ap_none  |          tile_size         |    pointer   |
+|remaining_size              |  in |   32|   ap_none  |       remaining_size       |    pointer   |
+|length_x_out_din            | out |   32|   ap_fifo  |        length_x_out        |    pointer   |
+|length_x_out_full_n         |  in |    1|   ap_fifo  |        length_x_out        |    pointer   |
+|length_x_out_write          | out |    1|   ap_fifo  |        length_x_out        |    pointer   |
+|tile_size_out_din           | out |   32|   ap_fifo  |        tile_size_out       |    pointer   |
+|tile_size_out_full_n        |  in |    1|   ap_fifo  |        tile_size_out       |    pointer   |
+|tile_size_out_write         | out |    1|   ap_fifo  |        tile_size_out       |    pointer   |
+|remaining_size_out_din      | out |   32|   ap_fifo  |     remaining_size_out     |    pointer   |
+|remaining_size_out_full_n   |  in |    1|   ap_fifo  |     remaining_size_out     |    pointer   |
+|remaining_size_out_write    | out |    1|   ap_fifo  |     remaining_size_out     |    pointer   |
++----------------------------+-----+-----+------------+----------------------------+--------------+
+

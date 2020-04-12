@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vivado HLS Report for 'rbf_kernel'
+================================================================
+* Date:           Mon Jun 24 13:17:04 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        rbf_kernel
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|    14.512|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  3544|  3544|  3150|  3150| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 7, States = { 1 2 3 4 5 6 7 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%temp_buf = alloca [784 x float], align 16" [rbf_kernel/top.cpp:33]   --->   Operation 8 'alloca' 'temp_buf' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%temp2_buf = alloca [784 x float], align 16" [rbf_kernel/top.cpp:34]   --->   Operation 9 'alloca' 'temp2_buf' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 10 [2/2] (0.00ns)   --->   "call fastcc void @Loop_1_proc(i32* %in_stream1_data_V, i4* %in_stream1_strb_V, i4* %in_stream1_keep_V, i4* %in_stream1_user_V, i1* %in_stream1_last_V, i5* %in_stream1_id_V, i5* %in_stream1_dest_V, [784 x float]* %temp_buf, i32* %in_stream2_data_V, i4* %in_stream2_strb_V, i4* %in_stream2_keep_V, i4* %in_stream2_user_V, i1* %in_stream2_last_V, i5* %in_stream2_id_V, i5* %in_stream2_dest_V, [784 x float]* %temp2_buf)"   --->   Operation 10 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 11 [1/2] (0.00ns)   --->   "call fastcc void @Loop_1_proc(i32* %in_stream1_data_V, i4* %in_stream1_strb_V, i4* %in_stream1_keep_V, i4* %in_stream1_user_V, i1* %in_stream1_last_V, i5* %in_stream1_id_V, i5* %in_stream1_dest_V, [784 x float]* %temp_buf, i32* %in_stream2_data_V, i4* %in_stream2_strb_V, i4* %in_stream2_keep_V, i4* %in_stream2_user_V, i1* %in_stream2_last_V, i5* %in_stream2_id_V, i5* %in_stream2_dest_V, [784 x float]* %temp2_buf)"   --->   Operation 11 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 12 [2/2] (0.00ns)   --->   "%sum_3_loc_channel = call fastcc float @Loop_LOOP_12_proc([784 x float]* %temp_buf, [784 x float]* %temp2_buf)"   --->   Operation 12 'call' 'sum_3_loc_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 13 [1/2] (0.00ns)   --->   "%sum_3_loc_channel = call fastcc float @Loop_LOOP_12_proc([784 x float]* %temp_buf, [784 x float]* %temp2_buf)"   --->   Operation 13 'call' 'sum_3_loc_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_5 : Operation 14 [2/2] (0.00ns)   --->   "call fastcc void @Block_Rbf_kernel_fun(float %sum_3_loc_channel, i32* %out_stream_data_V, i4* %out_stream_keep_V, i4* %out_stream_strb_V, i4* %out_stream_user_V, i1* %out_stream_last_V, i5* %out_stream_id_V, i5* %out_stream_dest_V)"   --->   Operation 14 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 15 [1/2] (0.00ns)   --->   "call fastcc void @Block_Rbf_kernel_fun(float %sum_3_loc_channel, i32* %out_stream_data_V, i4* %out_stream_keep_V, i4* %out_stream_strb_V, i4* %out_stream_user_V, i1* %out_stream_last_V, i5* %out_stream_id_V, i5* %out_stream_dest_V)"   --->   Operation 15 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind" [rbf_kernel/top.cpp:11]   --->   Operation 16 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_stream1_data_V), !map !55"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream1_keep_V), !map !61"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream1_strb_V), !map !65"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream1_user_V), !map !69"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_stream1_last_V), !map !73"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %in_stream1_id_V), !map !77"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %in_stream1_dest_V), !map !81"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_stream2_data_V), !map !85"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream2_keep_V), !map !89"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream2_strb_V), !map !93"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream2_user_V), !map !97"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_stream2_last_V), !map !101"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %in_stream2_id_V), !map !105"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %in_stream2_dest_V), !map !109"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_stream_data_V), !map !113"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_stream_keep_V), !map !117"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_stream_strb_V), !map !121"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_stream_user_V), !map !125"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_stream_last_V), !map !129"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %out_stream_id_V), !map !133"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %out_stream_dest_V), !map !137"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @rbf_kernel_str) nounwind"   --->   Operation 38 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [12 x i8]* @p_str2, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [rbf_kernel/top.cpp:12]   --->   Operation 39 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream1_data_V, i4* %in_stream1_keep_V, i4* %in_stream1_strb_V, i4* %in_stream1_user_V, i1* %in_stream1_last_V, i5* %in_stream1_id_V, i5* %in_stream1_dest_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 40 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream2_data_V, i4* %in_stream2_keep_V, i4* %in_stream2_strb_V, i4* %in_stream2_user_V, i1* %in_stream2_last_V, i5* %in_stream2_id_V, i5* %in_stream2_dest_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 41 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_data_V, i4* %out_stream_keep_V, i4* %out_stream_strb_V, i4* %out_stream_user_V, i1* %out_stream_last_V, i5* %out_stream_id_V, i5* %out_stream_dest_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 42 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "ret void" [rbf_kernel/top.cpp:58]   --->   Operation 43 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-64] Unable to schedule the loop exit test ('icmp' operation ('tmp_7', tiled_kernel_matrix/top.cpp:63)) in the first pipeline iteration (II = 1 cycles)." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:09:54.832+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-67] Unable to satisfy pipeline directive: subfunction 'rbf_kernel' is not pipelined." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:09:54.819+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input1_load_2', tiled_kernel_matrix/top.cpp:77) on array 'input1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'input1'." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:08:56.620+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (tiled_kernel_matrix/top.cpp:43:17) in function 'tiled_kernel_matrix' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:07:36.113+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1' (tiled_kernel_matrix/top.cpp:75) because its parent loop or function is pipelined." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:07:26.288+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-2.1.2.1' (tiled_kernel_matrix/top.cpp:52) because its parent loop or function is pipelined." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:07:26.270+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_index_stream.data.V' (tiled_kernel_matrix/top.cpp:7)." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:07:26.260+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_in_stream.data.V' (tiled_kernel_matrix/top.cpp:7)." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:07:26.222+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_out_stream.data.V' (tiled_kernel_matrix/top.cpp:7)." projectName="tiled_kernel_matrix" solutionName="solution1" date="2019-06-15T22:07:26.216+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"hardware_accelerator": {
+			"proto_instances": {
+			}
+		}
+	}
+}

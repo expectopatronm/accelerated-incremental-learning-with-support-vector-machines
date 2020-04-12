@@ -1,0 +1,63 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 8 -x 2880 -y 990 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2880 -y 1010 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2620 -y 1030 -defaultsOSRD
+preplace inst accelerator_function_0 -pg 1 -lvl 4 -x 1420 -y 510 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 930 -y 90 -defaultsOSRD
+preplace inst axi_dma_1 -pg 1 -lvl 3 -x 930 -y 250 -defaultsOSRD
+preplace inst axi_dma_2 -pg 1 -lvl 3 -x 930 -y 410 -defaultsOSRD
+preplace inst axi_dma_3 -pg 1 -lvl 3 -x 930 -y 590 -defaultsOSRD
+preplace inst axi_dma_4 -pg 1 -lvl 3 -x 930 -y 790 -defaultsOSRD
+preplace inst axi_dma_5 -pg 1 -lvl 5 -x 1850 -y 570 -defaultsOSRD
+preplace inst axi_dma_6 -pg 1 -lvl 5 -x 1850 -y 780 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 6 -x 2220 -y 660 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 3 -x 930 -y 1000 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 540 -y 730 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 190 -y 630 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2220 -y 1180 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 20 530 370 430 720 890 1150 330 1670 880 2070 880 2370 1160 2860
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 20 1110 NJ 1110 NJ 1110 NJ 1110 NJ 1110 NJ 1110 2360J 1170 2850
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 380 440 730 680 1120 340 1660 670 2020
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 360 550n
+preplace netloc axi_timer_0_interrupt 1 3 3 1160 1100 NJ 1100 2020J
+preplace netloc xlconcat_0_dout 1 6 1 2390 1100n
+preplace netloc accelerator_function_0_interrupt 1 4 2 1640 470 2030J
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 3 NJ 60 NJ 60 2080
+preplace netloc axi_smc_M00_AXI 1 6 1 2390 650n
+preplace netloc axi_smc_M01_AXI 1 6 1 2380 670n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 390 450 750J 500 1100J 350 NJ 350 NJ 350 NJ 350 2860
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 690 60n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 700 220n
+preplace netloc axi_dma_1_M_AXI_MM2S 1 3 3 NJ 220 NJ 220 2070
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 3 740 700 1180J 380 1680J
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 700 730n
+preplace netloc axi_dma_5_M_AXI_S2MM 1 5 1 2040 550n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 1 1170 80n
+preplace netloc axi_dma_1_M_AXIS_MM2S 1 3 1 1160 240n
+preplace netloc accelerator_function_0_kernel_out_stream 1 4 1 1650 490n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 2 N 690 1190J
+preplace netloc axi_dma_4_M_AXIS_MM2S 1 3 1 1200 540n
+preplace netloc axi_dma_3_M_AXIS_MM2S 1 3 1 1100 520n
+preplace netloc axi_dma_2_M_AXIS_MM2S 1 3 1 1140 400n
+preplace netloc accelerator_function_0_out_stream_predict 1 4 1 1630 510n
+preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 710 380n
+preplace netloc axi_dma_2_M_AXI_MM2S 1 3 3 1110J 370 NJ 370 2050
+preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 750 560n
+preplace netloc axi_dma_3_M_AXI_MM2S 1 3 3 1130 360 NJ 360 2060J
+preplace netloc ps7_0_axi_periph_M07_AXI 1 2 1 760 760n
+preplace netloc axi_dma_4_M_AXI_MM2S 1 3 3 1210 680 NJ 680 NJ
+preplace netloc ps7_0_axi_periph_M08_AXI 1 2 3 690J 880 NJ 880 1640
+preplace netloc axi_dma_6_M_AXI_S2MM 1 5 1 2050 700n
+preplace netloc processing_system7_0_DDR 1 7 1 NJ 990
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 1010
+levelinfo -pg 1 0 190 540 930 1420 1850 2220 2620 2880
+pagesize -pg 1 -db -bbox -sgen 0 0 3000 1250
+"
+}
+{
+   "da_axi4_cnt":"30",
+   "da_ps7_cnt":"1"
+}

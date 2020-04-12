@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="accelerator_function" xd:componentRef="accelerator_function" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(function_flag)" xd:originalName="function_flag" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(length_x_kernel)" xd:originalName="length_x_kernel" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(tile_size_kernel)" xd:originalName="tile_size_kernel" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(remaining_size_kernel)" xd:originalName="remaining_size_kernel" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(tile_count_predict)" xd:originalName="tile_count_predict" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:offset="0x30" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(remainder_predict)" xd:originalName="remainder_predict" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(dual_coeff_length)" xd:originalName="dual_coeff_length" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:offset="0x40" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="kernel_in_stream-&gt;data" xd:originalName="kernel_in_stream" xd:direction="in" xd:interfaceRef="kernel_in_stream" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="kernel_in_stream-&gt;keep" xd:originalName="kernel_in_stream" xd:direction="in" xd:interfaceRef="kernel_in_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_in_stream-&gt;strb" xd:originalName="kernel_in_stream" xd:direction="in" xd:interfaceRef="kernel_in_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_in_stream-&gt;user" xd:originalName="kernel_in_stream" xd:direction="in" xd:interfaceRef="kernel_in_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_in_stream-&gt;last" xd:originalName="kernel_in_stream" xd:direction="in" xd:interfaceRef="kernel_in_stream" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="kernel_in_stream-&gt;id" xd:originalName="kernel_in_stream" xd:direction="in" xd:interfaceRef="kernel_in_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="kernel_in_stream-&gt;dest" xd:originalName="kernel_in_stream" xd:direction="in" xd:interfaceRef="kernel_in_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="kernel_index_stream-&gt;data" xd:originalName="kernel_index_stream" xd:direction="in" xd:interfaceRef="kernel_index_stream" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="kernel_index_stream-&gt;keep" xd:originalName="kernel_index_stream" xd:direction="in" xd:interfaceRef="kernel_index_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_index_stream-&gt;strb" xd:originalName="kernel_index_stream" xd:direction="in" xd:interfaceRef="kernel_index_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_index_stream-&gt;user" xd:originalName="kernel_index_stream" xd:direction="in" xd:interfaceRef="kernel_index_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_index_stream-&gt;last" xd:originalName="kernel_index_stream" xd:direction="in" xd:interfaceRef="kernel_index_stream" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="kernel_index_stream-&gt;id" xd:originalName="kernel_index_stream" xd:direction="in" xd:interfaceRef="kernel_index_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="kernel_index_stream-&gt;dest" xd:originalName="kernel_index_stream" xd:direction="in" xd:interfaceRef="kernel_index_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="kernel_out_stream-&gt;data" xd:originalName="kernel_out_stream" xd:direction="out" xd:interfaceRef="kernel_out_stream" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="kernel_out_stream-&gt;keep" xd:originalName="kernel_out_stream" xd:direction="out" xd:interfaceRef="kernel_out_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_out_stream-&gt;strb" xd:originalName="kernel_out_stream" xd:direction="out" xd:interfaceRef="kernel_out_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_out_stream-&gt;user" xd:originalName="kernel_out_stream" xd:direction="out" xd:interfaceRef="kernel_out_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="kernel_out_stream-&gt;last" xd:originalName="kernel_out_stream" xd:direction="out" xd:interfaceRef="kernel_out_stream" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="kernel_out_stream-&gt;id" xd:originalName="kernel_out_stream" xd:direction="out" xd:interfaceRef="kernel_out_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="kernel_out_stream-&gt;dest" xd:originalName="kernel_out_stream" xd:direction="out" xd:interfaceRef="kernel_out_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="in_stream_predict-&gt;data" xd:originalName="in_stream_predict" xd:direction="in" xd:interfaceRef="in_stream_predict" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="in_stream_predict-&gt;keep" xd:originalName="in_stream_predict" xd:direction="in" xd:interfaceRef="in_stream_predict" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="in_stream_predict-&gt;strb" xd:originalName="in_stream_predict" xd:direction="in" xd:interfaceRef="in_stream_predict" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="in_stream_predict-&gt;user" xd:originalName="in_stream_predict" xd:direction="in" xd:interfaceRef="in_stream_predict" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="in_stream_predict-&gt;last" xd:originalName="in_stream_predict" xd:direction="in" xd:interfaceRef="in_stream_predict" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_stream_predict-&gt;id" xd:originalName="in_stream_predict" xd:direction="in" xd:interfaceRef="in_stream_predict" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="in_stream_predict-&gt;dest" xd:originalName="in_stream_predict" xd:direction="in" xd:interfaceRef="in_stream_predict" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="supp_vec_stream-&gt;data" xd:originalName="supp_vec_stream" xd:direction="in" xd:interfaceRef="supp_vec_stream" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="supp_vec_stream-&gt;keep" xd:originalName="supp_vec_stream" xd:direction="in" xd:interfaceRef="supp_vec_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="supp_vec_stream-&gt;strb" xd:originalName="supp_vec_stream" xd:direction="in" xd:interfaceRef="supp_vec_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="supp_vec_stream-&gt;user" xd:originalName="supp_vec_stream" xd:direction="in" xd:interfaceRef="supp_vec_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="supp_vec_stream-&gt;last" xd:originalName="supp_vec_stream" xd:direction="in" xd:interfaceRef="supp_vec_stream" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="supp_vec_stream-&gt;id" xd:originalName="supp_vec_stream" xd:direction="in" xd:interfaceRef="supp_vec_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="supp_vec_stream-&gt;dest" xd:originalName="supp_vec_stream" xd:direction="in" xd:interfaceRef="supp_vec_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="dual_coef_stream-&gt;data" xd:originalName="dual_coef_stream" xd:direction="in" xd:interfaceRef="dual_coef_stream" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="dual_coef_stream-&gt;keep" xd:originalName="dual_coef_stream" xd:direction="in" xd:interfaceRef="dual_coef_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="dual_coef_stream-&gt;strb" xd:originalName="dual_coef_stream" xd:direction="in" xd:interfaceRef="dual_coef_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="dual_coef_stream-&gt;user" xd:originalName="dual_coef_stream" xd:direction="in" xd:interfaceRef="dual_coef_stream" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="dual_coef_stream-&gt;last" xd:originalName="dual_coef_stream" xd:direction="in" xd:interfaceRef="dual_coef_stream" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="dual_coef_stream-&gt;id" xd:originalName="dual_coef_stream" xd:direction="in" xd:interfaceRef="dual_coef_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="dual_coef_stream-&gt;dest" xd:originalName="dual_coef_stream" xd:direction="in" xd:interfaceRef="dual_coef_stream" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="out_stream_predict-&gt;data" xd:originalName="out_stream_predict" xd:direction="out" xd:interfaceRef="out_stream_predict" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="out_stream_predict-&gt;keep" xd:originalName="out_stream_predict" xd:direction="out" xd:interfaceRef="out_stream_predict" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="out_stream_predict-&gt;strb" xd:originalName="out_stream_predict" xd:direction="out" xd:interfaceRef="out_stream_predict" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="out_stream_predict-&gt;user" xd:originalName="out_stream_predict" xd:direction="out" xd:interfaceRef="out_stream_predict" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="out_stream_predict-&gt;last" xd:originalName="out_stream_predict" xd:direction="out" xd:interfaceRef="out_stream_predict" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_stream_predict-&gt;id" xd:originalName="out_stream_predict" xd:direction="out" xd:interfaceRef="out_stream_predict" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:arg xd:name="out_stream_predict-&gt;dest" xd:originalName="out_stream_predict" xd:direction="out" xd:interfaceRef="out_stream_predict" xd:busTypeRef="axis" xd:dataWidth="5"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="48765" xd:FF="32410" xd:BRAM="300" xd:DSP="173"/>
+</xd:acceleratorMap>

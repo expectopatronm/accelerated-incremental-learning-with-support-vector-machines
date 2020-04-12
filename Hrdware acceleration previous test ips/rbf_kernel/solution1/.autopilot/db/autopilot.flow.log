@@ -1,0 +1,894 @@
+INFO-FLOW: Workspace F:/Hardware_Implementation/rbf_kernel/solution1 opened at Mon Jun 24 13:16:36 +0200 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.132 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.133 sec.
+Command     ap_source done; 0.133 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.241 sec.
+Execute   set_part xc7z020clg400-1 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'rbf_kernel/top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling rbf_kernel/top.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted rbf_kernel/top.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "rbf_kernel/top.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E rbf_kernel/top.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp
+Command       clang done; 0.863 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp"  -o "F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.163 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.598 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/rbf_kernel/solution1/solution1.json 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=F:/Hardware_Implementation/rbf_kernel/solution1/solution1.json -quiet -fix-errors F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.589 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.diag.yml F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.out.log 2> F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.err.log 
+Command       ap_eval done; 0.572 sec.
+WARNING: [HLS 214-114] Only function calls and local variable declarations are allowed in a dataflow region: rbf_kernel/top.cpp:17:2
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.851 sec.
+INFO-FLOW: tidy-3.1 time 3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.326 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.2.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.2.cpp
+Command       clang done; 0.842 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.bc" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.bc
+Command       clang done; 2.252 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/top.g.bc -hls-opt -except-internalize rbf_kernel -LE:/Vivado/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.939 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 102.648 ; gain = 46.418
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 102.648 ; gain = 46.418
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.pp.bc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LE:/Vivado/Vivado/2018.2/win64/lib -lfloatconversion -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.518 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top rbf_kernel -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.0.bc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'pop_stream' into 'rbf_kernel' (rbf_kernel/top.cpp:52).
+INFO: [XFORM 203-603] Inlining function 'pop_stream' into 'rbf_kernel' (rbf_kernel/top.cpp:49).
+INFO: [XFORM 203-603] Inlining function 'Rbf_kernel_func' into 'rbf_kernel' (rbf_kernel/top.cpp:56).
+INFO: [XFORM 203-603] Inlining function 'push_stream' into 'rbf_kernel' (rbf_kernel/top.cpp:57).
+Command         transform done; 0.11 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 123.906 ; gain = 67.676
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.1.bc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.111 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.2.prechk.bc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 139.527 ; gain = 83.297
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.g.1.bc to F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.o.1.bc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_stream.data.V' (rbf_kernel/top.cpp:9).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream2.data.V' (rbf_kernel/top.cpp:9).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream1.data.V' (rbf_kernel/top.cpp:9).
+INFO: [XFORM 203-501] Unrolling loop 'LOOP_12' (rbf_kernel/top.cpp:69) in function 'rbf_kernel' partially with a factor of 10.
+WARNING: [XFORM 203-561] Updating loop upper bound from 79 to 78 for loop 'LOOP_12' in function 'rbf_kernel'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 79 to 78 for loop 'LOOP_12' in function 'rbf_kernel'.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (rbf_kernel/top.cpp:47) to a process function for dataflow in function 'rbf_kernel'.
+INFO: [XFORM 203-721] Changing loop 'Loop_LOOP_12_proc' (rbf_kernel/top.cpp:69) to a process function for dataflow in function 'rbf_kernel'.
+INFO: [XFORM 203-712] Applying dataflow to function 'rbf_kernel', detected/extracted 3 process function(s): 
+	 'Loop_1_proc'
+	 'Loop_LOOP_12_proc'
+	 'Block_Rbf_kernel_func.exit_proc'.
+Command         transform done; 12.177 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.o.1.tmp.bc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.196 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 176.402 ; gain = 120.172
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.o.2.bc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'Block_Rbf_kernel_func.exit_proc' to 'Block_Rbf_kernel_fun' (rbf_kernel/top.cpp:56:22)
+Command         transform done; 0.288 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 204.258 ; gain = 148.027
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 13.585 sec.
+Command     elaborate done; 26.408 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'rbf_kernel' ...
+Execute       ap_set_top_model rbf_kernel 
+Execute       get_model_list rbf_kernel -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model rbf_kernel 
+Execute       preproc_iomode -model Block_Rbf_kernel_fun 
+Execute       preproc_iomode -model Loop_LOOP_12_proc 
+Execute       preproc_iomode -model Loop_1_proc 
+Execute       get_model_list rbf_kernel -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel
+INFO-FLOW: Configuring Module : Loop_1_proc ...
+Execute       set_default_model Loop_1_proc 
+Execute       apply_spec_resource_limit Loop_1_proc 
+INFO-FLOW: Configuring Module : Loop_LOOP_12_proc ...
+Execute       set_default_model Loop_LOOP_12_proc 
+Execute       apply_spec_resource_limit Loop_LOOP_12_proc 
+INFO-FLOW: Configuring Module : Block_Rbf_kernel_fun ...
+Execute       set_default_model Block_Rbf_kernel_fun 
+Execute       apply_spec_resource_limit Block_Rbf_kernel_fun 
+INFO-FLOW: Configuring Module : rbf_kernel ...
+Execute       set_default_model rbf_kernel 
+Execute       apply_spec_resource_limit rbf_kernel 
+INFO-FLOW: Model list for preprocess: Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel
+INFO-FLOW: Preprocessing Module: Loop_1_proc ...
+Execute       set_default_model Loop_1_proc 
+Execute       cdfg_preprocess -model Loop_1_proc 
+Execute       rtl_gen_preprocess Loop_1_proc 
+INFO-FLOW: Preprocessing Module: Loop_LOOP_12_proc ...
+Execute       set_default_model Loop_LOOP_12_proc 
+Execute       cdfg_preprocess -model Loop_LOOP_12_proc 
+Execute       rtl_gen_preprocess Loop_LOOP_12_proc 
+INFO-FLOW: Preprocessing Module: Block_Rbf_kernel_fun ...
+Execute       set_default_model Block_Rbf_kernel_fun 
+Execute       cdfg_preprocess -model Block_Rbf_kernel_fun 
+Execute       rtl_gen_preprocess Block_Rbf_kernel_fun 
+INFO-FLOW: Preprocessing Module: rbf_kernel ...
+Execute       set_default_model rbf_kernel 
+Execute       cdfg_preprocess -model rbf_kernel 
+Execute       rtl_gen_preprocess rbf_kernel 
+INFO-FLOW: Model list for synthesis: Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_1_proc 
+Execute       schedule -model Loop_1_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.232 seconds; current allocated memory: 158.690 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.verbose.sched.rpt -verbose -f 
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_1_proc.
+Execute       set_default_model Loop_1_proc 
+Execute       bind -model Loop_1_proc 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Loop_1_proc
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 158.837 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.verbose.bind.rpt -verbose -f 
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.bind.adb -f 
+INFO-FLOW: Finish binding Loop_1_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_LOOP_12_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Loop_LOOP_12_proc 
+Execute       schedule -model Loop_LOOP_12_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_12'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)
+   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)
+   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 0)
+   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 39, distance = 1, offset = 0)
+   between 'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) and 'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 40, Depth = 52.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'fadd' operation ('sum_9') to 'fadd' operation ('sum') (combination delay: 16.281 ns) to honor II or Latency constraint in region 'LOOP_12'.
+WARNING: [SCHED 204-21] Estimated clock period (14.512ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) (7.26 ns)
+	'fadd' operation ('sum_1', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) (7.26 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.264 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 159.577 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.verbose.sched.rpt -verbose -f 
+Command       report done; 0.217 sec.
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.sched.adb -f 
+INFO-FLOW: Finish scheduling Loop_LOOP_12_proc.
+Execute       set_default_model Loop_LOOP_12_proc 
+Execute       bind -model Loop_LOOP_12_proc 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Loop_LOOP_12_proc
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.429 seconds; current allocated memory: 160.171 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.verbose.bind.rpt -verbose -f 
+Command       report done; 0.26 sec.
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.bind.adb -f 
+INFO-FLOW: Finish binding Loop_LOOP_12_proc.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_Rbf_kernel_fun' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Block_Rbf_kernel_fun 
+Execute       schedule -model Block_Rbf_kernel_fun 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.353 seconds; current allocated memory: 160.314 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.verbose.sched.rpt -verbose -f 
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.sched.adb -f 
+INFO-FLOW: Finish scheduling Block_Rbf_kernel_fun.
+Execute       set_default_model Block_Rbf_kernel_fun 
+Execute       bind -model Block_Rbf_kernel_fun 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Block_Rbf_kernel_fun
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 160.397 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.verbose.bind.rpt -verbose -f 
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.bind.adb -f 
+INFO-FLOW: Finish binding Block_Rbf_kernel_fun.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'rbf_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model rbf_kernel 
+Execute       schedule -model rbf_kernel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.093 seconds; current allocated memory: 160.517 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.verbose.sched.rpt -verbose -f 
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.sched.adb -f 
+INFO-FLOW: Finish scheduling rbf_kernel.
+Execute       set_default_model rbf_kernel 
+Execute       bind -model rbf_kernel 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=rbf_kernel
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.138 seconds; current allocated memory: 160.683 MB.
+Execute       report -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.verbose.bind.rpt -verbose -f 
+Execute       db_write -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.bind.adb -f 
+INFO-FLOW: Finish binding rbf_kernel.
+Execute       get_model_list rbf_kernel -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Loop_1_proc 
+Execute       rtl_gen_preprocess Loop_LOOP_12_proc 
+Execute       rtl_gen_preprocess Block_Rbf_kernel_fun 
+Execute       rtl_gen_preprocess rbf_kernel 
+INFO-FLOW: Model list for RTL generation: Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_1_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Loop_1_proc -vendor xilinx -mg_file F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_1_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 161.768 MB.
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_1_proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/systemc/Loop_1_proc -synmodules Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel 
+Execute       gen_rtl Loop_1_proc -style xilinx -f -lang vhdl -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/vhdl/Loop_1_proc 
+Execute       gen_rtl Loop_1_proc -style xilinx -f -lang vlog -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/verilog/Loop_1_proc 
+Execute       gen_tb_info Loop_1_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc -p F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db 
+Execute       report -model Loop_1_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/Loop_1_proc_csynth.rpt -f 
+Execute       report -model Loop_1_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/Loop_1_proc_csynth.xml -f -x 
+Execute       report -model Loop_1_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.verbose.rpt -verbose -f 
+Execute       db_write -model Loop_1_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_LOOP_12_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Loop_LOOP_12_proc -vendor xilinx -mg_file F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'rbf_kernel_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'rbf_kernel_faddfsbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rbf_kernel_fsub_32ns_32ns_32_5_full_dsp_1' to 'rbf_kernel_fsub_3cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rbf_kernel_fadd_32ns_32ns_32_5_full_dsp_1' to 'rbf_kernel_fadd_3dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'rbf_kernel_fmul_32ns_32ns_32_4_max_dsp_1' to 'rbf_kernel_fmul_3eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rbf_kernel_fadd_3dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rbf_kernel_faddfsbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rbf_kernel_fmul_3eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rbf_kernel_fsub_3cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_LOOP_12_proc'.
+INFO: [HLS 200-111]  Elapsed time: 0.269 seconds; current allocated memory: 162.993 MB.
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Loop_LOOP_12_proc -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/systemc/Loop_LOOP_12_proc -synmodules Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel 
+Execute       gen_rtl Loop_LOOP_12_proc -style xilinx -f -lang vhdl -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/vhdl/Loop_LOOP_12_proc 
+Execute       gen_rtl Loop_LOOP_12_proc -style xilinx -f -lang vlog -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/verilog/Loop_LOOP_12_proc 
+Execute       gen_tb_info Loop_LOOP_12_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc -p F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db 
+Execute       report -model Loop_LOOP_12_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/Loop_LOOP_12_proc_csynth.rpt -f 
+Execute       report -model Loop_LOOP_12_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/Loop_LOOP_12_proc_csynth.xml -f -x 
+Execute       report -model Loop_LOOP_12_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.verbose.rpt -verbose -f 
+Command       report done; 0.137 sec.
+Execute       db_write -model Loop_LOOP_12_proc -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_Rbf_kernel_fun' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Block_Rbf_kernel_fun -vendor xilinx -mg_file F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'rbf_kernel_fexp_32ns_32ns_32_9_full_dsp_1' to 'rbf_kernel_fexp_3fYi' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'rbf_kernel_fexp_3fYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'rbf_kernel_fmul_3eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_Rbf_kernel_fun'.
+INFO: [HLS 200-111]  Elapsed time: 0.429 seconds; current allocated memory: 163.694 MB.
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Block_Rbf_kernel_fun -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/systemc/Block_Rbf_kernel_fun -synmodules Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel 
+Execute       gen_rtl Block_Rbf_kernel_fun -style xilinx -f -lang vhdl -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/vhdl/Block_Rbf_kernel_fun 
+Execute       gen_rtl Block_Rbf_kernel_fun -style xilinx -f -lang vlog -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/verilog/Block_Rbf_kernel_fun 
+Execute       gen_tb_info Block_Rbf_kernel_fun -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun -p F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db 
+Execute       report -model Block_Rbf_kernel_fun -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/Block_Rbf_kernel_fun_csynth.rpt -f 
+Execute       report -model Block_Rbf_kernel_fun -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/Block_Rbf_kernel_fun_csynth.xml -f -x 
+Execute       report -model Block_Rbf_kernel_fun -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.verbose.rpt -verbose -f 
+Execute       db_write -model Block_Rbf_kernel_fun -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'rbf_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model rbf_kernel -vendor xilinx -mg_file F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream1_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream1_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream1_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream1_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream1_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream1_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream1_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream2_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream2_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream2_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream2_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream2_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream2_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/in_stream2_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/out_stream_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/out_stream_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/out_stream_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/out_stream_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/out_stream_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/out_stream_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'rbf_kernel/out_stream_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'rbf_kernel' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CONTROL_BUS.
+INFO: [SYN 201-210] Renamed object name 'rbf_kernel_temp2_buf' to 'rbf_kernel_temp2_g8j' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'rbf_kernel'.
+Command       create_rtl_model done; 0.161 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.335 seconds; current allocated memory: 164.357 MB.
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute       gen_rtl rbf_kernel -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/systemc/rbf_kernel -synmodules Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel 
+Execute       gen_rtl rbf_kernel -istop -style xilinx -f -lang vhdl -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/vhdl/rbf_kernel 
+Execute       gen_rtl rbf_kernel -istop -style xilinx -f -lang vlog -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/verilog/rbf_kernel 
+Execute       export_constraint_db -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.constraint.tcl -f -tool general 
+Execute       report -model rbf_kernel -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.design.xml -verbose -f -dv 
+Execute       report -model rbf_kernel -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info rbf_kernel -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel -p F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db 
+Execute       report -model rbf_kernel -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/rbf_kernel_csynth.rpt -f 
+Execute       report -model rbf_kernel -o F:/Hardware_Implementation/rbf_kernel/solution1/syn/report/rbf_kernel_csynth.xml -f -x 
+Execute       report -model rbf_kernel -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.verbose.rpt -verbose -f 
+Execute       db_write -model rbf_kernel -o F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.adb -f 
+Execute       sc_get_clocks rbf_kernel 
+Execute       sc_get_portdomain rbf_kernel 
+INFO-FLOW: Model list for RTL component generation: Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel
+INFO-FLOW: Handling components in module [Loop_1_proc] ... 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+INFO-FLOW: Handling components in module [Loop_LOOP_12_proc] ... 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+INFO-FLOW: Found component rbf_kernel_faddfsbkb.
+INFO-FLOW: Append model rbf_kernel_faddfsbkb
+INFO-FLOW: Found component rbf_kernel_fsub_3cud.
+INFO-FLOW: Append model rbf_kernel_fsub_3cud
+INFO-FLOW: Found component rbf_kernel_fadd_3dEe.
+INFO-FLOW: Append model rbf_kernel_fadd_3dEe
+INFO-FLOW: Found component rbf_kernel_fmul_3eOg.
+INFO-FLOW: Append model rbf_kernel_fmul_3eOg
+INFO-FLOW: Handling components in module [Block_Rbf_kernel_fun] ... 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+INFO-FLOW: Found component rbf_kernel_fexp_3fYi.
+INFO-FLOW: Append model rbf_kernel_fexp_3fYi
+INFO-FLOW: Handling components in module [rbf_kernel] ... 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+INFO-FLOW: Found component fifo_w32_d2_A.
+INFO-FLOW: Append model fifo_w32_d2_A
+INFO-FLOW: Found component rbf_kernel_CONTROL_BUS_s_axi.
+INFO-FLOW: Append model rbf_kernel_CONTROL_BUS_s_axi
+INFO-FLOW: Append model Loop_1_proc
+INFO-FLOW: Append model Loop_LOOP_12_proc
+INFO-FLOW: Append model Block_Rbf_kernel_fun
+INFO-FLOW: Append model rbf_kernel
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: rbf_kernel_faddfsbkb rbf_kernel_fsub_3cud rbf_kernel_fadd_3dEe rbf_kernel_fmul_3eOg rbf_kernel_fexp_3fYi fifo_w32_d2_A rbf_kernel_CONTROL_BUS_s_axi Loop_1_proc Loop_LOOP_12_proc Block_Rbf_kernel_fun rbf_kernel
+INFO-FLOW: To file: write model rbf_kernel_faddfsbkb
+INFO-FLOW: To file: write model rbf_kernel_fsub_3cud
+INFO-FLOW: To file: write model rbf_kernel_fadd_3dEe
+INFO-FLOW: To file: write model rbf_kernel_fmul_3eOg
+INFO-FLOW: To file: write model rbf_kernel_fexp_3fYi
+INFO-FLOW: To file: write model fifo_w32_d2_A
+INFO-FLOW: To file: write model rbf_kernel_CONTROL_BUS_s_axi
+INFO-FLOW: To file: write model Loop_1_proc
+INFO-FLOW: To file: write model Loop_LOOP_12_proc
+INFO-FLOW: To file: write model Block_Rbf_kernel_fun
+INFO-FLOW: To file: write model rbf_kernel
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.124 sec.
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.127 sec.
+Command       ap_source done; 0.127 sec.
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+Command       ap_source done; 0.175 sec.
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'rbf_kernel_temp_buf_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'sum_3_loc_channel_U(fifo_w32_d2_A)' using Shift Registers.
+Execute         source ./CONTROL_BUS.slave.tcl 
+Execute         is_m_axi_addr64 
+Command       ap_source done; 0.113 sec.
+Execute       get_config_sdx -target 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.117 sec.
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.constraint.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.constraint.tcl 
+Execute       sc_get_clocks rbf_kernel 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/impl/misc/rbf_kernel_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/impl/misc/rbf_kernel_ap_faddfsub_3_full_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/impl/misc/rbf_kernel_ap_fexp_7_full_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/impl/misc/rbf_kernel_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/rbf_kernel/solution1/impl/misc/rbf_kernel_ap_fsub_3_full_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:32 . Memory (MB): peak = 221.223 ; gain = 164.992
+INFO: [SYSC 207-301] Generating SystemC RTL for rbf_kernel.
+INFO: [VHDL 208-304] Generating VHDL RTL for rbf_kernel.
+INFO: [VLOG 209-307] Generating Verilog RTL for rbf_kernel.
+Command     autosyn done; 4.954 sec.
+Command   csynth_design done; 31.366 sec.
+Command ap_source done; 31.662 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace F:/Hardware_Implementation/rbf_kernel/solution1 opened at Mon Jun 24 13:17:29 +0200 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.136 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.139 sec.
+Command     ap_source done; 0.139 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.244 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.122 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.124 sec.
+Command     ap_source done; 0.124 sec.
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.123 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.125 sec.
+Command     ap_source done; 0.126 sec.
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_1_proc.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Loop_LOOP_12_proc.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/Block_Rbf_kernel_fun.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.compgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.constraint.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.rtl_wrap.cfg.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.constraint.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.constraint.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.constraint.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/rbf_kernel.tbgen.tcl 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source F:/Hardware_Implementation/rbf_kernel/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.13 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.133 sec.
+Command     ap_source done; 0.133 sec.
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command   export_design done; 36.165 sec.
+Command ap_source done; 36.412 sec.
+Execute cleanup_all 

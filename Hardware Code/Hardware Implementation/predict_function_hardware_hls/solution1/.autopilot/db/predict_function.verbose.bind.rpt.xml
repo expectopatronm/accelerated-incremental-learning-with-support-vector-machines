@@ -1,0 +1,70 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'predict_function'" level="0">
+<item name = "Date">Thu Aug  1 03:02:51 2019
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">predict_function_hardware_hls</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 10.145, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOOP_11">78400, 78400, 784, -, -, 100, no</column>
+<column name="- LOOP_33">?, ?, 1, -, -, ?, no</column>
+<column name="- LOOP_44">?, ?, 208 ~ 4781068, -, -, ?, no</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_66">784, 784, 1, 1, 1, 784, yes</column>
+<column name=" + LOOP_77">200, 4773200, 2 ~ 47732, -, -, 100, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="  ++ LOOP_R">4749, 4749, 121, -, -, 39, no</column>
+<column name="- LOOP_99">101, 101, 3, 1, 1, 100, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

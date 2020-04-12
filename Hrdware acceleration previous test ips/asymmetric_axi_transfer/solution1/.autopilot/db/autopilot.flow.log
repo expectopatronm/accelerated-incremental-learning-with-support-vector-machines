@@ -1,0 +1,447 @@
+INFO-FLOW: Workspace F:/Hardware_Implementation/asymmetric_axi_transfer/solution1 opened at Tue Jun 11 15:42:06 +0200 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.136 sec.
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.139 sec.
+Command     ap_source done; 0.139 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.237 sec.
+Execute   set_part xc7z020clg400-1 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'asymmetric_axi_transfer/top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling asymmetric_axi_transfer/top.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted asymmetric_axi_transfer/top.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "asymmetric_axi_transfer/top.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E asymmetric_axi_transfer/top.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp
+Command       clang done; 0.865 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp"  -o "F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.167 sec.
+INFO-FLOW: GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.45 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 -directive=F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/solution1.json 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/solution1.json -quiet -fix-errors F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.439 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.diag.yml F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.out.log 2> F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/xilinx-dataflow-lawyer.top.pp.0.cpp.err.log 
+Command       ap_eval done; 0.39 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.363 sec.
+INFO-FLOW: tidy-3.1 time 2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.006 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "E:/Vivado/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.2.cpp" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.2.cpp
+Command       clang done; 0.839 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot" -I "E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.bc" 
+INFO-FLOW: exec E:/Vivado/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain E:/Vivado/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I E:/Vivado/Vivado/2018.2/common/technology/autopilot -I E:/Vivado/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.bc
+Command       clang done; 1.18 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/top.g.bc -hls-opt -except-internalize kernel_matrix -LE:/Vivado/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.847 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 103.152 ; gain = 46.098
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 103.152 ; gain = 46.098
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.pp.bc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LE:/Vivado/Vivado/2018.2/win64/lib -lfloatconversion -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.445 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top kernel_matrix -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.0.bc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'pop_stream' into 'kernel_matrix' (asymmetric_axi_transfer/top.cpp:37).
+INFO: [XFORM 203-603] Inlining function 'push_stream' into 'kernel_matrix' (asymmetric_axi_transfer/top.cpp:56).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 111.930 ; gain = 54.875
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.1.bc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'rbf_kernel' into 'kernel_matrix' (asymmetric_axi_transfer/top.cpp:50) automatically.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.2.prechk.bc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 117.273 ; gain = 60.219
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.g.1.bc to F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.o.1.bc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_stream.data.V' (asymmetric_axi_transfer/top.cpp:7).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream.data.V' (asymmetric_axi_transfer/top.cpp:7).
+INFO: [XFORM 203-602] Inlining function 'rbf_kernel' into 'kernel_matrix' (asymmetric_axi_transfer/top.cpp:50) automatically.
+Command         transform done; 0.212 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.o.1.tmp.bc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.11 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 143.758 ; gain = 86.703
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.o.2.bc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 0.182 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 144.535 ; gain = 87.480
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 1.213 sec.
+Command     elaborate done; 10.406 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'kernel_matrix' ...
+Execute       ap_set_top_model kernel_matrix 
+Execute       get_model_list kernel_matrix -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model kernel_matrix 
+Execute       get_model_list kernel_matrix -filter all-wo-channel 
+INFO-FLOW: Model list for configure: kernel_matrix
+INFO-FLOW: Configuring Module : kernel_matrix ...
+Execute       set_default_model kernel_matrix 
+Execute       apply_spec_resource_limit kernel_matrix 
+INFO-FLOW: Model list for preprocess: kernel_matrix
+INFO-FLOW: Preprocessing Module: kernel_matrix ...
+Execute       set_default_model kernel_matrix 
+Execute       cdfg_preprocess -model kernel_matrix 
+Execute       rtl_gen_preprocess kernel_matrix 
+INFO-FLOW: Model list for synthesis: kernel_matrix
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model kernel_matrix 
+Execute       schedule -model kernel_matrix 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.287 seconds; current allocated memory: 94.470 MB.
+Execute       report -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+Execute       db_write -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.sched.adb -f 
+INFO-FLOW: Finish scheduling kernel_matrix.
+Execute       set_default_model kernel_matrix 
+Execute       bind -model kernel_matrix 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=kernel_matrix
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'input_buf' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 94.985 MB.
+Execute       report -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.verbose.bind.rpt -verbose -f 
+Execute       db_write -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.bind.adb -f 
+INFO-FLOW: Finish binding kernel_matrix.
+Execute       get_model_list kernel_matrix -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess kernel_matrix 
+INFO-FLOW: Model list for RTL generation: kernel_matrix
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_matrix' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model kernel_matrix -vendor xilinx -mg_file F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/in_stream_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/in_stream_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/in_stream_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/in_stream_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/in_stream_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/in_stream_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/in_stream_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/out_stream_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/out_stream_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/out_stream_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/out_stream_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/out_stream_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/out_stream_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/out_stream_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/my_index' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kernel_matrix/length_x' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kernel_matrix' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'my_index' and 'length_x' to AXI-Lite port CONTROL_BUS.
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_input_buf' to 'kernel_matrix_inpbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_temp_buf' to 'kernel_matrix_temcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_temp2_buf' to 'kernel_matrix_temdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_result_buf' to 'kernel_matrix_reseOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'kernel_matrix_fadfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_fmul_32ns_32ns_32_4_max_dsp_1' to 'kernel_matrix_fmug8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_fexp_32ns_32ns_32_9_full_dsp_1' to 'kernel_matrix_fexhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'kernel_matrix_mul_mul_11ns_18s_18_1_1' to 'kernel_matrix_mulibs' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_fadfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_fexhbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_fmug8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'kernel_matrix_mulibs': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_matrix'.
+Command       create_rtl_model done; 0.18 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.311 seconds; current allocated memory: 96.949 MB.
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.rtl_wrap.cfg.tcl 
+Execute       gen_rtl kernel_matrix -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/syn/systemc/kernel_matrix -synmodules kernel_matrix 
+Execute       gen_rtl kernel_matrix -istop -style xilinx -f -lang vhdl -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/syn/vhdl/kernel_matrix 
+Execute       gen_rtl kernel_matrix -istop -style xilinx -f -lang vlog -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/syn/verilog/kernel_matrix 
+Execute       export_constraint_db -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.constraint.tcl -f -tool general 
+Execute       report -model kernel_matrix -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.design.xml -verbose -f -dv 
+Execute       report -model kernel_matrix -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info kernel_matrix -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix -p F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db 
+Execute       report -model kernel_matrix -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/syn/report/kernel_matrix_csynth.rpt -f 
+Execute       report -model kernel_matrix -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/syn/report/kernel_matrix_csynth.xml -f -x 
+Execute       report -model kernel_matrix -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.verbose.rpt -verbose -f 
+Command       report done; 0.107 sec.
+Execute       db_write -model kernel_matrix -o F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.adb -f 
+Execute       sc_get_clocks kernel_matrix 
+Execute       sc_get_portdomain kernel_matrix 
+INFO-FLOW: Model list for RTL component generation: kernel_matrix
+INFO-FLOW: Handling components in module [kernel_matrix] ... 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.compgen.tcl 
+INFO-FLOW: Found component kernel_matrix_fadfYi.
+INFO-FLOW: Append model kernel_matrix_fadfYi
+INFO-FLOW: Found component kernel_matrix_fmug8j.
+INFO-FLOW: Append model kernel_matrix_fmug8j
+INFO-FLOW: Found component kernel_matrix_fexhbi.
+INFO-FLOW: Append model kernel_matrix_fexhbi
+INFO-FLOW: Found component kernel_matrix_mulibs.
+INFO-FLOW: Append model kernel_matrix_mulibs
+INFO-FLOW: Found component kernel_matrix_inpbkb.
+INFO-FLOW: Append model kernel_matrix_inpbkb
+INFO-FLOW: Found component kernel_matrix_temcud.
+INFO-FLOW: Append model kernel_matrix_temcud
+INFO-FLOW: Found component kernel_matrix_reseOg.
+INFO-FLOW: Append model kernel_matrix_reseOg
+INFO-FLOW: Found component kernel_matrix_CONTROL_BUS_s_axi.
+INFO-FLOW: Append model kernel_matrix_CONTROL_BUS_s_axi
+INFO-FLOW: Append model kernel_matrix
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: kernel_matrix_fadfYi kernel_matrix_fmug8j kernel_matrix_fexhbi kernel_matrix_mulibs kernel_matrix_inpbkb kernel_matrix_temcud kernel_matrix_reseOg kernel_matrix_CONTROL_BUS_s_axi kernel_matrix
+INFO-FLOW: To file: write model kernel_matrix_fadfYi
+INFO-FLOW: To file: write model kernel_matrix_fmug8j
+INFO-FLOW: To file: write model kernel_matrix_fexhbi
+INFO-FLOW: To file: write model kernel_matrix_mulibs
+INFO-FLOW: To file: write model kernel_matrix_inpbkb
+INFO-FLOW: To file: write model kernel_matrix_temcud
+INFO-FLOW: To file: write model kernel_matrix_reseOg
+INFO-FLOW: To file: write model kernel_matrix_CONTROL_BUS_s_axi
+INFO-FLOW: To file: write model kernel_matrix
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.118 sec.
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.121 sec.
+Command       ap_source done; 0.121 sec.
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'kernel_matrix_inpbkb_ram (RAM_1P_LUTRAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel_matrix_temcud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'kernel_matrix_reseOg_ram (RAM)' using block RAMs.
+Execute         source ./CONTROL_BUS.slave.tcl 
+Execute         is_m_axi_addr64 
+Command       ap_source done; 0.288 sec.
+Execute       get_config_sdx -target 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source E:/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.117 sec.
+Execute           source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.119 sec.
+Command       ap_source done; 0.119 sec.
+Execute       source E:/Vivado/Vivado/2018.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source E:/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.rtl_wrap.cfg.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.compgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.compgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.compgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.constraint.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.tbgen.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/kernel_matrix.constraint.tcl 
+Execute       sc_get_clocks kernel_matrix 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/impl/misc/kernel_matrix_ap_faddfsub_3_full_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/impl/misc/kernel_matrix_ap_fexp_7_full_dsp_32_ip.tcl 
+Execute       source F:/Hardware_Implementation/asymmetric_axi_transfer/solution1/impl/misc/kernel_matrix_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 151.910 ; gain = 94.855
+INFO: [SYSC 207-301] Generating SystemC RTL for kernel_matrix.
+INFO: [VHDL 208-304] Generating VHDL RTL for kernel_matrix.
+INFO: [VLOG 209-307] Generating Verilog RTL for kernel_matrix.
+Command     autosyn done; 2.462 sec.
+Command   csynth_design done; 12.872 sec.
+Command ap_source done; 13.163 sec.
+Execute cleanup_all 

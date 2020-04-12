@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_1_proc'
+================================================================
+* Date:           Mon Jun 24 13:17:03 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        rbf_kernel
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.254|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |  394|  394|  394|  394|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  392|  392|         2|          1|          1|   392|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	4  / (exitcond_i_i)
+	3  / (!exitcond_i_i)
+3 --> 
+	2  / true
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i5* %in_stream2_dest_V, i5* %in_stream2_id_V, i1* %in_stream2_last_V, i4* %in_stream2_user_V, i4* %in_stream2_strb_V, i4* %in_stream2_keep_V, i32* %in_stream2_data_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i5* %in_stream1_dest_V, i5* %in_stream1_id_V, i1* %in_stream1_last_V, i4* %in_stream1_user_V, i4* %in_stream1_strb_V, i4* %in_stream1_keep_V, i32* %in_stream1_data_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.76ns)   --->   "br label %0"   --->   Operation 7 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.63>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%is_idx1_0_i_i = phi i9 [ 0, %newFuncRoot ], [ %is_idx1, %1 ]"   --->   Operation 8 'phi' 'is_idx1_0_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i_0_i_i = phi i10 [ 0, %newFuncRoot ], [ %i, %1 ]"   --->   Operation 9 'phi' 'i_0_i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.66ns)   --->   "%exitcond_i_i = icmp eq i9 %is_idx1_0_i_i, -120" [rbf_kernel/top.cpp:47]   --->   Operation 10 'icmp' 'exitcond_i_i' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 392, i64 392, i64 392)"   --->   Operation 11 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.82ns)   --->   "%is_idx1 = add i9 %is_idx1_0_i_i, 1" [rbf_kernel/top.cpp:49]   --->   Operation 12 'add' 'is_idx1' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "br i1 %exitcond_i_i, label %rbf_kernel_.exit.0.exitStub, label %1" [rbf_kernel/top.cpp:47]   --->   Operation 13 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (0.00ns)   --->   "%empty_12 = call { i5, i5, i1, i4, i4, i4, i32 } @_ssdm_op_Read.axis.volatile.i5P.i5P.i1P.i4P.i4P.i4P.i32P(i5* %in_stream1_dest_V, i5* %in_stream1_id_V, i1* %in_stream1_last_V, i4* %in_stream1_user_V, i4* %in_stream1_strb_V, i4* %in_stream1_keep_V, i32* %in_stream1_data_V)"   --->   Operation 14 'read' 'empty_12' <Predicate = (!exitcond_i_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 15 [2/2] (0.00ns)   --->   "%empty_13 = call { i5, i5, i1, i4, i4, i4, i32 } @_ssdm_op_Read.axis.volatile.i5P.i5P.i1P.i4P.i4P.i4P.i32P(i5* %in_stream2_dest_V, i5* %in_stream2_id_V, i1* %in_stream2_last_V, i4* %in_stream2_user_V, i4* %in_stream2_strb_V, i4* %in_stream2_keep_V, i32* %in_stream2_data_V)"   --->   Operation 15 'read' 'empty_13' <Predicate = (!exitcond_i_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5)" [rbf_kernel/top.cpp:47]   --->   Operation 16 'specregionbegin' 'tmp_1' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [rbf_kernel/top.cpp:48]   --->   Operation 17 'specpipeline' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 18 [1/2] (0.00ns)   --->   "%empty_12 = call { i5, i5, i1, i4, i4, i4, i32 } @_ssdm_op_Read.axis.volatile.i5P.i5P.i1P.i4P.i4P.i4P.i32P(i5* %in_stream1_dest_V, i5* %in_stream1_id_V, i1* %in_stream1_last_V, i4* %in_stream1_user_V, i4* %in_stream1_strb_V, i4* %in_stream1_keep_V, i32* %in_stream1_data_V)"   --->   Operation 18 'read' 'empty_12' <Predicate = (!exitcond_i_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%in_stream1_data_V_tm = extractvalue { i5, i5, i1, i4, i4, i4, i32 } %empty_12, 6"   --->   Operation 19 'extractvalue' 'in_stream1_data_V_tm' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_1_i = bitcast i32 %in_stream1_data_V_tm to float" [rbf_kernel/top.cpp:50]   --->   Operation 20 'bitcast' 'tmp_1_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_2_i = zext i10 %i_0_i_i to i64" [rbf_kernel/top.cpp:50]   --->   Operation 21 'zext' 'tmp_2_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%temp_buf_addr_4 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_2_i" [rbf_kernel/top.cpp:50]   --->   Operation 22 'getelementptr' 'temp_buf_addr_4' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (3.25ns)   --->   "store float %tmp_1_i, float* %temp_buf_addr_4, align 8" [rbf_kernel/top.cpp:50]   --->   Operation 23 'store' <Predicate = (!exitcond_i_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%tmp_3_i = or i10 %i_0_i_i, 1" [rbf_kernel/top.cpp:51]   --->   Operation 24 'or' 'tmp_3_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_4_i = zext i10 %tmp_3_i to i64" [rbf_kernel/top.cpp:51]   --->   Operation 25 'zext' 'tmp_4_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%temp_buf_addr_5 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_4_i" [rbf_kernel/top.cpp:51]   --->   Operation 26 'getelementptr' 'temp_buf_addr_5' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (3.25ns)   --->   "store float 0.000000e+00, float* %temp_buf_addr_5, align 4" [rbf_kernel/top.cpp:51]   --->   Operation 27 'store' <Predicate = (!exitcond_i_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 28 [1/2] (0.00ns)   --->   "%empty_13 = call { i5, i5, i1, i4, i4, i4, i32 } @_ssdm_op_Read.axis.volatile.i5P.i5P.i1P.i4P.i4P.i4P.i32P(i5* %in_stream2_dest_V, i5* %in_stream2_id_V, i1* %in_stream2_last_V, i4* %in_stream2_user_V, i4* %in_stream2_strb_V, i4* %in_stream2_keep_V, i32* %in_stream2_data_V)"   --->   Operation 28 'read' 'empty_13' <Predicate = (!exitcond_i_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%in_stream2_data_V_tm = extractvalue { i5, i5, i1, i4, i4, i4, i32 } %empty_13, 6"   --->   Operation 29 'extractvalue' 'in_stream2_data_V_tm' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_5_i = bitcast i32 %in_stream2_data_V_tm to float" [rbf_kernel/top.cpp:53]   --->   Operation 30 'bitcast' 'tmp_5_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%temp2_buf_addr_4 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_2_i" [rbf_kernel/top.cpp:53]   --->   Operation 31 'getelementptr' 'temp2_buf_addr_4' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (3.25ns)   --->   "store float %tmp_5_i, float* %temp2_buf_addr_4, align 8" [rbf_kernel/top.cpp:53]   --->   Operation 32 'store' <Predicate = (!exitcond_i_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%temp2_buf_addr_5 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_4_i" [rbf_kernel/top.cpp:54]   --->   Operation 33 'getelementptr' 'temp2_buf_addr_5' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (3.25ns)   --->   "store float 0.000000e+00, float* %temp2_buf_addr_5, align 4" [rbf_kernel/top.cpp:54]   --->   Operation 34 'store' <Predicate = (!exitcond_i_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp_1)" [rbf_kernel/top.cpp:55]   --->   Operation 35 'specregionend' 'empty_14' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.73ns)   --->   "%i = add i10 %i_0_i_i, 2" [rbf_kernel/top.cpp:47]   --->   Operation 36 'add' 'i' <Predicate = (!exitcond_i_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "br label %0" [rbf_kernel/top.cpp:47]   --->   Operation 37 'br' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 38 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('is_idx1') with incoming values : ('is_idx1', rbf_kernel/top.cpp:49) [21]  (1.77 ns)
+
+ <State 2>: 2.64ns
+The critical path consists of the following:
+	'icmp' operation ('exitcond_i_i', rbf_kernel/top.cpp:47) [23]  (1.66 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	axis read on port 'in_stream1_dest_V' [30]  (0 ns)
+	'store' operation (rbf_kernel/top.cpp:50) of variable 'tmp_1_i', rbf_kernel/top.cpp:50 on array 'temp_buf' [35]  (3.25 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

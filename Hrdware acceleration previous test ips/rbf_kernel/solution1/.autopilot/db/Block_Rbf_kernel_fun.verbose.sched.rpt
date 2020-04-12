@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_Rbf_kernel_fun'
+================================================================
+* Date:           Mon Jun 24 13:17:04 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        rbf_kernel
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.684|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   13|   13|   13|   13|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.70>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_read_1 = call float @_ssdm_op_Read.ap_auto.float(float %p_read)"   --->   Operation 15 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [4/4] (5.70ns)   --->   "%tmp_8_i = fmul float %p_read_1, 0xBFA99999A0000000" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 16 'fmul' 'tmp_8_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 5.70>
+ST_2 : Operation 17 [3/4] (5.70ns)   --->   "%tmp_8_i = fmul float %p_read_1, 0xBFA99999A0000000" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 17 'fmul' 'tmp_8_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.70>
+ST_3 : Operation 18 [2/4] (5.70ns)   --->   "%tmp_8_i = fmul float %p_read_1, 0xBFA99999A0000000" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 18 'fmul' 'tmp_8_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 5.70>
+ST_4 : Operation 19 [1/4] (5.70ns)   --->   "%tmp_8_i = fmul float %p_read_1, 0xBFA99999A0000000" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 19 'fmul' 'tmp_8_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 7.68>
+ST_5 : Operation 20 [9/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 20 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.68>
+ST_6 : Operation 21 [8/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 21 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.68>
+ST_7 : Operation 22 [7/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 22 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.68>
+ST_8 : Operation 23 [6/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 23 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.68>
+ST_9 : Operation 24 [5/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 24 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.68>
+ST_10 : Operation 25 [4/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 25 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.68>
+ST_11 : Operation 26 [3/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 26 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.68>
+ST_12 : Operation 27 [2/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 27 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.68>
+ST_13 : Operation 28 [1/9] (7.68ns)   --->   "%tmp_9_i = call float @llvm.exp.f32(float %tmp_8_i) nounwind" [rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56]   --->   Operation 28 'fexp' 'tmp_9_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_13 : Operation 29 [1/1] (0.00ns)   --->   "%out_stream_data_V_tm = bitcast float %tmp_9_i to i32" [rbf_kernel/top.cpp:56]   --->   Operation 29 'bitcast' 'out_stream_data_V_tm' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 30 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i5P.i5P.i1P.i4P.i4P.i4P.i32P(i5* %out_stream_dest_V, i5* %out_stream_id_V, i1* %out_stream_last_V, i4* %out_stream_user_V, i4* %out_stream_strb_V, i4* %out_stream_keep_V, i32* %out_stream_data_V, i5 0, i5 0, i1 true, i4 0, i4 -1, i4 -1, i32 %out_stream_data_V_tm)" [rbf_kernel/top.cpp:56]   --->   Operation 30 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i5* %out_stream_dest_V, i5* %out_stream_id_V, i1* %out_stream_last_V, i4* %out_stream_user_V, i4* %out_stream_strb_V, i4* %out_stream_keep_V, i32* %out_stream_data_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 32 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i5P.i5P.i1P.i4P.i4P.i4P.i32P(i5* %out_stream_dest_V, i5* %out_stream_id_V, i1* %out_stream_last_V, i4* %out_stream_user_V, i4* %out_stream_strb_V, i4* %out_stream_keep_V, i32* %out_stream_data_V, i5 0, i5 0, i1 true, i4 0, i4 -1, i4 -1, i32 %out_stream_data_V_tm)" [rbf_kernel/top.cpp:56]   --->   Operation 32 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_14 : Operation 33 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 33 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.7ns
+The critical path consists of the following:
+	wire read on port 'p_read' [9]  (0 ns)
+	'fmul' operation ('tmp_8_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [11]  (5.7 ns)
+
+ <State 2>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [11]  (5.7 ns)
+
+ <State 3>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [11]  (5.7 ns)
+
+ <State 4>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [11]  (5.7 ns)
+
+ <State 5>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 6>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 7>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 8>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 9>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 10>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 11>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 12>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 13>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_9_i', rbf_kernel/top.cpp:75->rbf_kernel/top.cpp:56) [12]  (7.68 ns)
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

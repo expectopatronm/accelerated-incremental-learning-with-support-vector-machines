@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:39.442+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.419+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.405+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.393+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.380+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.371+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.357+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.345+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.335+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.324+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.313+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.302+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.288+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.275+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.259+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.245+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.233+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.221+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.205+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.191+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.179+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.165+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.153+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.132+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.112+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.094+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.079+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.061+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.044+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.030+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.014+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:37.002+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.991+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.979+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.969+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.959+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.949+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.935+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.809+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 40 to 39 for loop 'LOOP_R' in function 'predict_function'." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:56:36.800+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream.data.V' (predict_single/top.cpp:7)." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:52:16.716+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'supp_vec_stream.data.V' (predict_single/top.cpp:7)." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:52:16.628+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'dual_coef_stream.data.V' (predict_single/top.cpp:7)." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:52:16.605+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_stream.data.V' (predict_single/top.cpp:7)." projectName="predict_single" solutionName="solution1" date="2019-06-25T12:52:16.595+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

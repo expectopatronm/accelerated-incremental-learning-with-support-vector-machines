@@ -1,0 +1,844 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_LOOP_12_proc'
+================================================================
+* Date:           Mon Jun 24 13:17:03 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        rbf_kernel
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|    14.512|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  3149|  3149|  3149|  3149|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+        |           |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+        |- LOOP_12  |  3147|  3147|        52|         40|          1|    78|    yes   |
+        +-----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 40, depth = 52
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 54
+* Pipeline : 1
+  Pipeline-0 : II = 40, D = 52, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	54  / (tmp_7_4)
+	30  / (!tmp_7_4)
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	2  / true
+54 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 55 [1/1] (1.76ns)   --->   "br label %rbf_kernel_.exit.0"   --->   Operation 55 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%i_0_i2 = phi i10 [ %i_1_9, %rbf_kernel_.exit.5 ], [ 0, %newFuncRoot ]" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 56 'phi' 'i_0_i2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_s = zext i10 %i_0_i2 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 57 'zext' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%temp_buf_addr = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_s" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 58 'getelementptr' 'temp_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [2/2] (3.25ns)   --->   "%temp_buf_load = load float* %temp_buf_addr, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 59 'load' 'temp_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%temp2_buf_addr = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_s" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 60 'getelementptr' 'temp2_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [2/2] (3.25ns)   --->   "%temp2_buf_load = load float* %temp2_buf_addr, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 61 'load' 'temp2_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%i_1_s = or i10 %i_0_i2, 1" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 62 'or' 'i_1_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_1_9 = zext i10 %i_1_s to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 63 'zext' 'tmp_1_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%temp_buf_addr_1 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_1_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 64 'getelementptr' 'temp_buf_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [2/2] (3.25ns)   --->   "%temp_buf_load_1 = load float* %temp_buf_addr_1, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 65 'load' 'temp_buf_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%temp2_buf_addr_1 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_1_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 66 'getelementptr' 'temp2_buf_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [2/2] (3.25ns)   --->   "%temp2_buf_load_1 = load float* %temp2_buf_addr_1, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 67 'load' 'temp2_buf_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+
+State 3 <SV = 2> <Delay = 4.98>
+ST_3 : Operation 68 [1/2] (3.25ns)   --->   "%temp_buf_load = load float* %temp_buf_addr, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 68 'load' 'temp_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 69 [1/2] (3.25ns)   --->   "%temp2_buf_load = load float* %temp2_buf_addr, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 69 'load' 'temp2_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 70 [1/2] (3.25ns)   --->   "%temp_buf_load_1 = load float* %temp_buf_addr_1, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 70 'load' 'temp_buf_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 71 [1/2] (3.25ns)   --->   "%temp2_buf_load_1 = load float* %temp2_buf_addr_1, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 71 'load' 'temp2_buf_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 72 [1/1] (1.73ns)   --->   "%i_1_1 = add i10 %i_0_i2, 2" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 72 'add' 'i_1_1' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_2_10 = zext i10 %i_1_1 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 73 'zext' 'tmp_2_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%temp_buf_addr_2 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_2_10" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 74 'getelementptr' 'temp_buf_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [2/2] (3.25ns)   --->   "%temp_buf_load_2 = load float* %temp_buf_addr_2, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 75 'load' 'temp_buf_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%temp2_buf_addr_2 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_2_10" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 76 'getelementptr' 'temp2_buf_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [2/2] (3.25ns)   --->   "%temp2_buf_load_2 = load float* %temp2_buf_addr_2, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 77 'load' 'temp2_buf_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 78 [1/1] (1.73ns)   --->   "%i_1_2 = add i10 %i_0_i2, 3" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 78 'add' 'i_1_2' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_3 = zext i10 %i_1_2 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 79 'zext' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%temp_buf_addr_3 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_3" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 80 'getelementptr' 'temp_buf_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [2/2] (3.25ns)   --->   "%temp_buf_load_3 = load float* %temp_buf_addr_3, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 81 'load' 'temp_buf_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%temp2_buf_addr_3 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_3" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 82 'getelementptr' 'temp2_buf_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [2/2] (3.25ns)   --->   "%temp2_buf_load_3 = load float* %temp2_buf_addr_3, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 83 'load' 'temp2_buf_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+
+State 4 <SV = 3> <Delay = 7.25>
+ST_4 : Operation 84 [5/5] (7.25ns)   --->   "%tmp_1 = fsub float %temp_buf_load, %temp2_buf_load" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 84 'fsub' 'tmp_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [5/5] (7.25ns)   --->   "%tmp_11_1 = fsub float %temp_buf_load_1, %temp2_buf_load_1" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 85 'fsub' 'tmp_11_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/2] (3.25ns)   --->   "%temp_buf_load_2 = load float* %temp_buf_addr_2, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 86 'load' 'temp_buf_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_4 : Operation 87 [1/2] (3.25ns)   --->   "%temp2_buf_load_2 = load float* %temp2_buf_addr_2, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 87 'load' 'temp2_buf_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_4 : Operation 88 [1/2] (3.25ns)   --->   "%temp_buf_load_3 = load float* %temp_buf_addr_3, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 88 'load' 'temp_buf_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_4 : Operation 89 [1/2] (3.25ns)   --->   "%temp2_buf_load_3 = load float* %temp2_buf_addr_3, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 89 'load' 'temp2_buf_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_4 : Operation 90 [1/1] (1.73ns)   --->   "%i_1_3 = add i10 %i_0_i2, 4" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 90 'add' 'i_1_3' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [1/1] (1.77ns)   --->   "%tmp_7_4 = icmp eq i10 %i_1_3, -240" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 91 'icmp' 'tmp_7_4' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_4 = zext i10 %i_1_3 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 92 'zext' 'tmp_4' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%temp_buf_addr_4 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 93 'getelementptr' 'temp_buf_addr_4' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_4 : Operation 94 [2/2] (3.25ns)   --->   "%temp_buf_load_4 = load float* %temp_buf_addr_4, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 94 'load' 'temp_buf_load_4' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%temp2_buf_addr_4 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 95 'getelementptr' 'temp2_buf_addr_4' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_4 : Operation 96 [2/2] (3.25ns)   --->   "%temp2_buf_load_4 = load float* %temp2_buf_addr_4, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 96 'load' 'temp2_buf_load_4' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_4 : Operation 97 [1/1] (1.73ns)   --->   "%i_1_4 = add i10 %i_0_i2, 5" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 97 'add' 'i_1_4' <Predicate = (!tmp_7_4)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_5 = zext i10 %i_1_4 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 98 'zext' 'tmp_5' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%temp_buf_addr_5 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_5" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 99 'getelementptr' 'temp_buf_addr_5' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_4 : Operation 100 [2/2] (3.25ns)   --->   "%temp_buf_load_5 = load float* %temp_buf_addr_5, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 100 'load' 'temp_buf_load_5' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%temp2_buf_addr_5 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_5" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 101 'getelementptr' 'temp2_buf_addr_5' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_4 : Operation 102 [2/2] (3.25ns)   --->   "%temp2_buf_load_5 = load float* %temp2_buf_addr_5, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 102 'load' 'temp2_buf_load_5' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+
+State 5 <SV = 4> <Delay = 7.25>
+ST_5 : Operation 103 [4/5] (7.25ns)   --->   "%tmp_1 = fsub float %temp_buf_load, %temp2_buf_load" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 103 'fsub' 'tmp_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [4/5] (7.25ns)   --->   "%tmp_11_1 = fsub float %temp_buf_load_1, %temp2_buf_load_1" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 104 'fsub' 'tmp_11_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 105 [5/5] (7.25ns)   --->   "%tmp_11_2 = fsub float %temp_buf_load_2, %temp2_buf_load_2" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 105 'fsub' 'tmp_11_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 106 [5/5] (7.25ns)   --->   "%tmp_11_3 = fsub float %temp_buf_load_3, %temp2_buf_load_3" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 106 'fsub' 'tmp_11_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 107 [1/2] (3.25ns)   --->   "%temp_buf_load_4 = load float* %temp_buf_addr_4, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 107 'load' 'temp_buf_load_4' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_5 : Operation 108 [1/2] (3.25ns)   --->   "%temp2_buf_load_4 = load float* %temp2_buf_addr_4, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 108 'load' 'temp2_buf_load_4' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_5 : Operation 109 [1/2] (3.25ns)   --->   "%temp_buf_load_5 = load float* %temp_buf_addr_5, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 109 'load' 'temp_buf_load_5' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_5 : Operation 110 [1/2] (3.25ns)   --->   "%temp2_buf_load_5 = load float* %temp2_buf_addr_5, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 110 'load' 'temp2_buf_load_5' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_5 : Operation 111 [1/1] (1.73ns)   --->   "%i_1_5 = add i10 %i_0_i2, 6" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 111 'add' 'i_1_5' <Predicate = (!tmp_7_4)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_6 = zext i10 %i_1_5 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 112 'zext' 'tmp_6' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_5 : Operation 113 [1/1] (0.00ns)   --->   "%temp_buf_addr_6 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_6" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 113 'getelementptr' 'temp_buf_addr_6' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_5 : Operation 114 [2/2] (3.25ns)   --->   "%temp_buf_load_6 = load float* %temp_buf_addr_6, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 114 'load' 'temp_buf_load_6' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_5 : Operation 115 [1/1] (0.00ns)   --->   "%temp2_buf_addr_6 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_6" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 115 'getelementptr' 'temp2_buf_addr_6' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_5 : Operation 116 [2/2] (3.25ns)   --->   "%temp2_buf_load_6 = load float* %temp2_buf_addr_6, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 116 'load' 'temp2_buf_load_6' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_5 : Operation 117 [1/1] (1.73ns)   --->   "%i_1_6 = add i10 %i_0_i2, 7" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 117 'add' 'i_1_6' <Predicate = (!tmp_7_4)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_7 = zext i10 %i_1_6 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 118 'zext' 'tmp_7' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%temp_buf_addr_7 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_7" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 119 'getelementptr' 'temp_buf_addr_7' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_5 : Operation 120 [2/2] (3.25ns)   --->   "%temp_buf_load_7 = load float* %temp_buf_addr_7, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 120 'load' 'temp_buf_load_7' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%temp2_buf_addr_7 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_7" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 121 'getelementptr' 'temp2_buf_addr_7' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_5 : Operation 122 [2/2] (3.25ns)   --->   "%temp2_buf_load_7 = load float* %temp2_buf_addr_7, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 122 'load' 'temp2_buf_load_7' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+
+State 6 <SV = 5> <Delay = 7.25>
+ST_6 : Operation 123 [3/5] (7.25ns)   --->   "%tmp_1 = fsub float %temp_buf_load, %temp2_buf_load" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 123 'fsub' 'tmp_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 124 [3/5] (7.25ns)   --->   "%tmp_11_1 = fsub float %temp_buf_load_1, %temp2_buf_load_1" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 124 'fsub' 'tmp_11_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 125 [4/5] (7.25ns)   --->   "%tmp_11_2 = fsub float %temp_buf_load_2, %temp2_buf_load_2" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 125 'fsub' 'tmp_11_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 126 [4/5] (7.25ns)   --->   "%tmp_11_3 = fsub float %temp_buf_load_3, %temp2_buf_load_3" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 126 'fsub' 'tmp_11_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 127 [5/5] (7.25ns)   --->   "%tmp_11_4 = fsub float %temp_buf_load_4, %temp2_buf_load_4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 127 'fsub' 'tmp_11_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 128 [5/5] (7.25ns)   --->   "%tmp_11_5 = fsub float %temp_buf_load_5, %temp2_buf_load_5" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 128 'fsub' 'tmp_11_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 129 [1/2] (3.25ns)   --->   "%temp_buf_load_6 = load float* %temp_buf_addr_6, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 129 'load' 'temp_buf_load_6' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_6 : Operation 130 [1/2] (3.25ns)   --->   "%temp2_buf_load_6 = load float* %temp2_buf_addr_6, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 130 'load' 'temp2_buf_load_6' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_6 : Operation 131 [1/2] (3.25ns)   --->   "%temp_buf_load_7 = load float* %temp_buf_addr_7, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 131 'load' 'temp_buf_load_7' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_6 : Operation 132 [1/2] (3.25ns)   --->   "%temp2_buf_load_7 = load float* %temp2_buf_addr_7, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 132 'load' 'temp2_buf_load_7' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_6 : Operation 133 [1/1] (1.73ns)   --->   "%i_1_7 = add i10 %i_0_i2, 8" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 133 'add' 'i_1_7' <Predicate = (!tmp_7_4)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_8 = zext i10 %i_1_7 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 134 'zext' 'tmp_8' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_6 : Operation 135 [1/1] (0.00ns)   --->   "%temp_buf_addr_8 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 135 'getelementptr' 'temp_buf_addr_8' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_6 : Operation 136 [2/2] (3.25ns)   --->   "%temp_buf_load_8 = load float* %temp_buf_addr_8, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 136 'load' 'temp_buf_load_8' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_6 : Operation 137 [1/1] (0.00ns)   --->   "%temp2_buf_addr_8 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 137 'getelementptr' 'temp2_buf_addr_8' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_6 : Operation 138 [2/2] (3.25ns)   --->   "%temp2_buf_load_8 = load float* %temp2_buf_addr_8, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 138 'load' 'temp2_buf_load_8' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_6 : Operation 139 [1/1] (1.73ns)   --->   "%i_1_8 = add i10 %i_0_i2, 9" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 139 'add' 'i_1_8' <Predicate = (!tmp_7_4)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_9 = zext i10 %i_1_8 to i64" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 140 'zext' 'tmp_9' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_6 : Operation 141 [1/1] (0.00ns)   --->   "%temp_buf_addr_9 = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 141 'getelementptr' 'temp_buf_addr_9' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_6 : Operation 142 [2/2] (3.25ns)   --->   "%temp_buf_load_9 = load float* %temp_buf_addr_9, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 142 'load' 'temp_buf_load_9' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_6 : Operation 143 [1/1] (0.00ns)   --->   "%temp2_buf_addr_9 = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 143 'getelementptr' 'temp2_buf_addr_9' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+ST_6 : Operation 144 [2/2] (3.25ns)   --->   "%temp2_buf_load_9 = load float* %temp2_buf_addr_9, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 144 'load' 'temp2_buf_load_9' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 145 [2/5] (7.25ns)   --->   "%tmp_1 = fsub float %temp_buf_load, %temp2_buf_load" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 145 'fsub' 'tmp_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 146 [2/5] (7.25ns)   --->   "%tmp_11_1 = fsub float %temp_buf_load_1, %temp2_buf_load_1" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 146 'fsub' 'tmp_11_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 147 [3/5] (7.25ns)   --->   "%tmp_11_2 = fsub float %temp_buf_load_2, %temp2_buf_load_2" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 147 'fsub' 'tmp_11_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 148 [3/5] (7.25ns)   --->   "%tmp_11_3 = fsub float %temp_buf_load_3, %temp2_buf_load_3" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 148 'fsub' 'tmp_11_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 149 [4/5] (7.25ns)   --->   "%tmp_11_4 = fsub float %temp_buf_load_4, %temp2_buf_load_4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 149 'fsub' 'tmp_11_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 150 [4/5] (7.25ns)   --->   "%tmp_11_5 = fsub float %temp_buf_load_5, %temp2_buf_load_5" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 150 'fsub' 'tmp_11_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 151 [5/5] (7.25ns)   --->   "%tmp_11_6 = fsub float %temp_buf_load_6, %temp2_buf_load_6" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 151 'fsub' 'tmp_11_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 152 [5/5] (7.25ns)   --->   "%tmp_11_7 = fsub float %temp_buf_load_7, %temp2_buf_load_7" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 152 'fsub' 'tmp_11_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 153 [1/2] (3.25ns)   --->   "%temp_buf_load_8 = load float* %temp_buf_addr_8, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 153 'load' 'temp_buf_load_8' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_7 : Operation 154 [1/2] (3.25ns)   --->   "%temp2_buf_load_8 = load float* %temp2_buf_addr_8, align 8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 154 'load' 'temp2_buf_load_8' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_7 : Operation 155 [1/2] (3.25ns)   --->   "%temp_buf_load_9 = load float* %temp_buf_addr_9, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 155 'load' 'temp_buf_load_9' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+ST_7 : Operation 156 [1/2] (3.25ns)   --->   "%temp2_buf_load_9 = load float* %temp2_buf_addr_9, align 4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 156 'load' 'temp2_buf_load_9' <Predicate = (!tmp_7_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 784> <RAM>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 157 [1/5] (7.25ns)   --->   "%tmp_1 = fsub float %temp_buf_load, %temp2_buf_load" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 157 'fsub' 'tmp_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 158 [1/5] (7.25ns)   --->   "%tmp_11_1 = fsub float %temp_buf_load_1, %temp2_buf_load_1" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 158 'fsub' 'tmp_11_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 159 [2/5] (7.25ns)   --->   "%tmp_11_2 = fsub float %temp_buf_load_2, %temp2_buf_load_2" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 159 'fsub' 'tmp_11_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 160 [2/5] (7.25ns)   --->   "%tmp_11_3 = fsub float %temp_buf_load_3, %temp2_buf_load_3" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 160 'fsub' 'tmp_11_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 161 [3/5] (7.25ns)   --->   "%tmp_11_4 = fsub float %temp_buf_load_4, %temp2_buf_load_4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 161 'fsub' 'tmp_11_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 162 [3/5] (7.25ns)   --->   "%tmp_11_5 = fsub float %temp_buf_load_5, %temp2_buf_load_5" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 162 'fsub' 'tmp_11_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 163 [4/5] (7.25ns)   --->   "%tmp_11_6 = fsub float %temp_buf_load_6, %temp2_buf_load_6" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 163 'fsub' 'tmp_11_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 164 [4/5] (7.25ns)   --->   "%tmp_11_7 = fsub float %temp_buf_load_7, %temp2_buf_load_7" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 164 'fsub' 'tmp_11_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 165 [5/5] (7.25ns)   --->   "%tmp_11_8 = fsub float %temp_buf_load_8, %temp2_buf_load_8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 165 'fsub' 'tmp_11_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 166 [5/5] (7.25ns)   --->   "%tmp_11_9 = fsub float %temp_buf_load_9, %temp2_buf_load_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 166 'fsub' 'tmp_11_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 167 [4/4] (5.70ns)   --->   "%tmp_2 = fmul float %tmp_1, %tmp_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 167 'fmul' 'tmp_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 168 [1/5] (7.25ns)   --->   "%tmp_11_2 = fsub float %temp_buf_load_2, %temp2_buf_load_2" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 168 'fsub' 'tmp_11_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 169 [1/5] (7.25ns)   --->   "%tmp_11_3 = fsub float %temp_buf_load_3, %temp2_buf_load_3" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 169 'fsub' 'tmp_11_3' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 170 [2/5] (7.25ns)   --->   "%tmp_11_4 = fsub float %temp_buf_load_4, %temp2_buf_load_4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 170 'fsub' 'tmp_11_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 171 [2/5] (7.25ns)   --->   "%tmp_11_5 = fsub float %temp_buf_load_5, %temp2_buf_load_5" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 171 'fsub' 'tmp_11_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 172 [3/5] (7.25ns)   --->   "%tmp_11_6 = fsub float %temp_buf_load_6, %temp2_buf_load_6" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 172 'fsub' 'tmp_11_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 173 [3/5] (7.25ns)   --->   "%tmp_11_7 = fsub float %temp_buf_load_7, %temp2_buf_load_7" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 173 'fsub' 'tmp_11_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 174 [4/5] (7.25ns)   --->   "%tmp_11_8 = fsub float %temp_buf_load_8, %temp2_buf_load_8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 174 'fsub' 'tmp_11_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 175 [4/5] (7.25ns)   --->   "%tmp_11_9 = fsub float %temp_buf_load_9, %temp2_buf_load_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 175 'fsub' 'tmp_11_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 176 [3/4] (5.70ns)   --->   "%tmp_2 = fmul float %tmp_1, %tmp_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 176 'fmul' 'tmp_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 177 [4/4] (5.70ns)   --->   "%tmp_12_1 = fmul float %tmp_11_1, %tmp_11_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 177 'fmul' 'tmp_12_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 178 [1/5] (7.25ns)   --->   "%tmp_11_4 = fsub float %temp_buf_load_4, %temp2_buf_load_4" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 178 'fsub' 'tmp_11_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 179 [1/5] (7.25ns)   --->   "%tmp_11_5 = fsub float %temp_buf_load_5, %temp2_buf_load_5" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 179 'fsub' 'tmp_11_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 180 [2/5] (7.25ns)   --->   "%tmp_11_6 = fsub float %temp_buf_load_6, %temp2_buf_load_6" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 180 'fsub' 'tmp_11_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 181 [2/5] (7.25ns)   --->   "%tmp_11_7 = fsub float %temp_buf_load_7, %temp2_buf_load_7" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 181 'fsub' 'tmp_11_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 182 [3/5] (7.25ns)   --->   "%tmp_11_8 = fsub float %temp_buf_load_8, %temp2_buf_load_8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 182 'fsub' 'tmp_11_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 183 [3/5] (7.25ns)   --->   "%tmp_11_9 = fsub float %temp_buf_load_9, %temp2_buf_load_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 183 'fsub' 'tmp_11_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.25>
+ST_11 : Operation 184 [2/4] (5.70ns)   --->   "%tmp_2 = fmul float %tmp_1, %tmp_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 184 'fmul' 'tmp_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 185 [3/4] (5.70ns)   --->   "%tmp_12_1 = fmul float %tmp_11_1, %tmp_11_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 185 'fmul' 'tmp_12_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 186 [4/4] (5.70ns)   --->   "%tmp_12_2 = fmul float %tmp_11_2, %tmp_11_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 186 'fmul' 'tmp_12_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 187 [1/5] (7.25ns)   --->   "%tmp_11_6 = fsub float %temp_buf_load_6, %temp2_buf_load_6" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 187 'fsub' 'tmp_11_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 188 [1/5] (7.25ns)   --->   "%tmp_11_7 = fsub float %temp_buf_load_7, %temp2_buf_load_7" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 188 'fsub' 'tmp_11_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 189 [2/5] (7.25ns)   --->   "%tmp_11_8 = fsub float %temp_buf_load_8, %temp2_buf_load_8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 189 'fsub' 'tmp_11_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 190 [2/5] (7.25ns)   --->   "%tmp_11_9 = fsub float %temp_buf_load_9, %temp2_buf_load_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 190 'fsub' 'tmp_11_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.25>
+ST_12 : Operation 191 [1/4] (5.70ns)   --->   "%tmp_2 = fmul float %tmp_1, %tmp_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 191 'fmul' 'tmp_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 192 [2/4] (5.70ns)   --->   "%tmp_12_1 = fmul float %tmp_11_1, %tmp_11_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 192 'fmul' 'tmp_12_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 193 [3/4] (5.70ns)   --->   "%tmp_12_2 = fmul float %tmp_11_2, %tmp_11_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 193 'fmul' 'tmp_12_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 194 [4/4] (5.70ns)   --->   "%tmp_12_3 = fmul float %tmp_11_3, %tmp_11_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 194 'fmul' 'tmp_12_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 195 [1/5] (7.25ns)   --->   "%tmp_11_8 = fsub float %temp_buf_load_8, %temp2_buf_load_8" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 195 'fsub' 'tmp_11_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 196 [1/5] (7.25ns)   --->   "%tmp_11_9 = fsub float %temp_buf_load_9, %temp2_buf_load_9" [rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56]   --->   Operation 196 'fsub' 'tmp_11_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.25>
+ST_13 : Operation 197 [1/1] (0.00ns)   --->   "%sum_0_i = phi float [ %sum_9, %rbf_kernel_.exit.5 ], [ 0.000000e+00, %newFuncRoot ]" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 197 'phi' 'sum_0_i' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 198 [5/5] (7.25ns)   --->   "%sum = fadd float %sum_0_i, %tmp_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 198 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 199 [1/4] (5.70ns)   --->   "%tmp_12_1 = fmul float %tmp_11_1, %tmp_11_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 199 'fmul' 'tmp_12_1' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 200 [2/4] (5.70ns)   --->   "%tmp_12_2 = fmul float %tmp_11_2, %tmp_11_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 200 'fmul' 'tmp_12_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 201 [3/4] (5.70ns)   --->   "%tmp_12_3 = fmul float %tmp_11_3, %tmp_11_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 201 'fmul' 'tmp_12_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 202 [4/4] (5.70ns)   --->   "%tmp_12_4 = fmul float %tmp_11_4, %tmp_11_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 202 'fmul' 'tmp_12_4' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.25>
+ST_14 : Operation 203 [4/5] (7.25ns)   --->   "%sum = fadd float %sum_0_i, %tmp_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 203 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 204 [1/4] (5.70ns)   --->   "%tmp_12_2 = fmul float %tmp_11_2, %tmp_11_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 204 'fmul' 'tmp_12_2' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 205 [2/4] (5.70ns)   --->   "%tmp_12_3 = fmul float %tmp_11_3, %tmp_11_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 205 'fmul' 'tmp_12_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 206 [3/4] (5.70ns)   --->   "%tmp_12_4 = fmul float %tmp_11_4, %tmp_11_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 206 'fmul' 'tmp_12_4' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 207 [4/4] (5.70ns)   --->   "%tmp_12_5 = fmul float %tmp_11_5, %tmp_11_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 207 'fmul' 'tmp_12_5' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 208 [3/5] (7.25ns)   --->   "%sum = fadd float %sum_0_i, %tmp_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 208 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 209 [1/4] (5.70ns)   --->   "%tmp_12_3 = fmul float %tmp_11_3, %tmp_11_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 209 'fmul' 'tmp_12_3' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 210 [2/4] (5.70ns)   --->   "%tmp_12_4 = fmul float %tmp_11_4, %tmp_11_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 210 'fmul' 'tmp_12_4' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 211 [3/4] (5.70ns)   --->   "%tmp_12_5 = fmul float %tmp_11_5, %tmp_11_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 211 'fmul' 'tmp_12_5' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 212 [4/4] (5.70ns)   --->   "%tmp_12_6 = fmul float %tmp_11_6, %tmp_11_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 212 'fmul' 'tmp_12_6' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.25>
+ST_16 : Operation 213 [2/5] (7.25ns)   --->   "%sum = fadd float %sum_0_i, %tmp_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 213 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 214 [1/4] (5.70ns)   --->   "%tmp_12_4 = fmul float %tmp_11_4, %tmp_11_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 214 'fmul' 'tmp_12_4' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 215 [2/4] (5.70ns)   --->   "%tmp_12_5 = fmul float %tmp_11_5, %tmp_11_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 215 'fmul' 'tmp_12_5' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 216 [3/4] (5.70ns)   --->   "%tmp_12_6 = fmul float %tmp_11_6, %tmp_11_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 216 'fmul' 'tmp_12_6' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 217 [4/4] (5.70ns)   --->   "%tmp_12_7 = fmul float %tmp_11_7, %tmp_11_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 217 'fmul' 'tmp_12_7' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 14.5>
+ST_17 : Operation 218 [1/5] (7.25ns)   --->   "%sum = fadd float %sum_0_i, %tmp_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 218 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 219 [5/5] (7.25ns)   --->   "%sum_1 = fadd float %sum, %tmp_12_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 219 'fadd' 'sum_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 220 [1/4] (5.70ns)   --->   "%tmp_12_5 = fmul float %tmp_11_5, %tmp_11_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 220 'fmul' 'tmp_12_5' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 221 [2/4] (5.70ns)   --->   "%tmp_12_6 = fmul float %tmp_11_6, %tmp_11_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 221 'fmul' 'tmp_12_6' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 222 [3/4] (5.70ns)   --->   "%tmp_12_7 = fmul float %tmp_11_7, %tmp_11_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 222 'fmul' 'tmp_12_7' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 223 [4/4] (5.70ns)   --->   "%tmp_12_8 = fmul float %tmp_11_8, %tmp_11_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 223 'fmul' 'tmp_12_8' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.25>
+ST_18 : Operation 224 [4/5] (7.25ns)   --->   "%sum_1 = fadd float %sum, %tmp_12_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 224 'fadd' 'sum_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 225 [1/4] (5.70ns)   --->   "%tmp_12_6 = fmul float %tmp_11_6, %tmp_11_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 225 'fmul' 'tmp_12_6' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 226 [2/4] (5.70ns)   --->   "%tmp_12_7 = fmul float %tmp_11_7, %tmp_11_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 226 'fmul' 'tmp_12_7' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 227 [3/4] (5.70ns)   --->   "%tmp_12_8 = fmul float %tmp_11_8, %tmp_11_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 227 'fmul' 'tmp_12_8' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 228 [4/4] (5.70ns)   --->   "%tmp_12_9 = fmul float %tmp_11_9, %tmp_11_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 228 'fmul' 'tmp_12_9' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 7.25>
+ST_19 : Operation 229 [3/5] (7.25ns)   --->   "%sum_1 = fadd float %sum, %tmp_12_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 229 'fadd' 'sum_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 230 [1/4] (5.70ns)   --->   "%tmp_12_7 = fmul float %tmp_11_7, %tmp_11_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 230 'fmul' 'tmp_12_7' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 231 [2/4] (5.70ns)   --->   "%tmp_12_8 = fmul float %tmp_11_8, %tmp_11_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 231 'fmul' 'tmp_12_8' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 232 [3/4] (5.70ns)   --->   "%tmp_12_9 = fmul float %tmp_11_9, %tmp_11_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 232 'fmul' 'tmp_12_9' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 7.25>
+ST_20 : Operation 233 [2/5] (7.25ns)   --->   "%sum_1 = fadd float %sum, %tmp_12_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 233 'fadd' 'sum_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 234 [1/4] (5.70ns)   --->   "%tmp_12_8 = fmul float %tmp_11_8, %tmp_11_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 234 'fmul' 'tmp_12_8' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 235 [2/4] (5.70ns)   --->   "%tmp_12_9 = fmul float %tmp_11_9, %tmp_11_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 235 'fmul' 'tmp_12_9' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 14.5>
+ST_21 : Operation 236 [1/5] (7.25ns)   --->   "%sum_1 = fadd float %sum, %tmp_12_1" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 236 'fadd' 'sum_1' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 237 [5/5] (7.25ns)   --->   "%sum_2 = fadd float %sum_1, %tmp_12_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 237 'fadd' 'sum_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 238 [1/4] (5.70ns)   --->   "%tmp_12_9 = fmul float %tmp_11_9, %tmp_11_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 238 'fmul' 'tmp_12_9' <Predicate = (!tmp_7_4)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 7.25>
+ST_22 : Operation 239 [4/5] (7.25ns)   --->   "%sum_2 = fadd float %sum_1, %tmp_12_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 239 'fadd' 'sum_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 7.25>
+ST_23 : Operation 240 [3/5] (7.25ns)   --->   "%sum_2 = fadd float %sum_1, %tmp_12_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 240 'fadd' 'sum_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 7.25>
+ST_24 : Operation 241 [2/5] (7.25ns)   --->   "%sum_2 = fadd float %sum_1, %tmp_12_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 241 'fadd' 'sum_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 14.5>
+ST_25 : Operation 242 [1/5] (7.25ns)   --->   "%sum_2 = fadd float %sum_1, %tmp_12_2" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 242 'fadd' 'sum_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 243 [5/5] (7.25ns)   --->   "%sum_3_out = fadd float %sum_2, %tmp_12_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 243 'fadd' 'sum_3_out' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 7.25>
+ST_26 : Operation 244 [4/5] (7.25ns)   --->   "%sum_3_out = fadd float %sum_2, %tmp_12_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 244 'fadd' 'sum_3_out' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 7.25>
+ST_27 : Operation 245 [3/5] (7.25ns)   --->   "%sum_3_out = fadd float %sum_2, %tmp_12_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 245 'fadd' 'sum_3_out' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 7.25>
+ST_28 : Operation 246 [2/5] (7.25ns)   --->   "%sum_3_out = fadd float %sum_2, %tmp_12_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 246 'fadd' 'sum_3_out' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 14.5>
+ST_29 : Operation 247 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str6) nounwind" [rbf_kernel/top.cpp:69->rbf_kernel/top.cpp:56]   --->   Operation 247 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 248 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str6)" [rbf_kernel/top.cpp:69->rbf_kernel/top.cpp:56]   --->   Operation 248 'specregionbegin' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 249 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [rbf_kernel/top.cpp:71->rbf_kernel/top.cpp:56]   --->   Operation 249 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 250 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str6, i32 %tmp)" [rbf_kernel/top.cpp:74->rbf_kernel/top.cpp:56]   --->   Operation 250 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 251 [1/5] (7.25ns)   --->   "%sum_3_out = fadd float %sum_2, %tmp_12_3" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 251 'fadd' 'sum_3_out' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 252 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 78, i64 78, i64 78)"   --->   Operation 252 'speclooptripcount' 'empty_11' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 253 [1/1] (0.00ns)   --->   "br i1 %tmp_7_4, label %Rbf_kernel_func.exit.exitStub, label %rbf_kernel_.exit.5" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 253 'br' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 254 [5/5] (7.25ns)   --->   "%sum_4 = fadd float %sum_3_out, %tmp_12_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 254 'fadd' 'sum_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 7.25>
+ST_30 : Operation 255 [4/5] (7.25ns)   --->   "%sum_4 = fadd float %sum_3_out, %tmp_12_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 255 'fadd' 'sum_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 7.25>
+ST_31 : Operation 256 [3/5] (7.25ns)   --->   "%sum_4 = fadd float %sum_3_out, %tmp_12_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 256 'fadd' 'sum_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 7.25>
+ST_32 : Operation 257 [2/5] (7.25ns)   --->   "%sum_4 = fadd float %sum_3_out, %tmp_12_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 257 'fadd' 'sum_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 14.5>
+ST_33 : Operation 258 [1/5] (7.25ns)   --->   "%sum_4 = fadd float %sum_3_out, %tmp_12_4" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 258 'fadd' 'sum_4' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 259 [5/5] (7.25ns)   --->   "%sum_5 = fadd float %sum_4, %tmp_12_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 259 'fadd' 'sum_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 7.25>
+ST_34 : Operation 260 [4/5] (7.25ns)   --->   "%sum_5 = fadd float %sum_4, %tmp_12_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 260 'fadd' 'sum_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 7.25>
+ST_35 : Operation 261 [3/5] (7.25ns)   --->   "%sum_5 = fadd float %sum_4, %tmp_12_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 261 'fadd' 'sum_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 7.25>
+ST_36 : Operation 262 [2/5] (7.25ns)   --->   "%sum_5 = fadd float %sum_4, %tmp_12_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 262 'fadd' 'sum_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 14.5>
+ST_37 : Operation 263 [1/5] (7.25ns)   --->   "%sum_5 = fadd float %sum_4, %tmp_12_5" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 263 'fadd' 'sum_5' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 264 [5/5] (7.25ns)   --->   "%sum_6 = fadd float %sum_5, %tmp_12_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 264 'fadd' 'sum_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 7.25>
+ST_38 : Operation 265 [4/5] (7.25ns)   --->   "%sum_6 = fadd float %sum_5, %tmp_12_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 265 'fadd' 'sum_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 7.25>
+ST_39 : Operation 266 [3/5] (7.25ns)   --->   "%sum_6 = fadd float %sum_5, %tmp_12_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 266 'fadd' 'sum_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 7.25>
+ST_40 : Operation 267 [2/5] (7.25ns)   --->   "%sum_6 = fadd float %sum_5, %tmp_12_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 267 'fadd' 'sum_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 14.5>
+ST_41 : Operation 268 [1/5] (7.25ns)   --->   "%sum_6 = fadd float %sum_5, %tmp_12_6" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 268 'fadd' 'sum_6' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 269 [5/5] (7.25ns)   --->   "%sum_7 = fadd float %sum_6, %tmp_12_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 269 'fadd' 'sum_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 270 [1/1] (1.73ns)   --->   "%i_1_9 = add i10 %i_0_i2, 10" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 270 'add' 'i_1_9' <Predicate = (!tmp_7_4)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 7.25>
+ST_42 : Operation 271 [4/5] (7.25ns)   --->   "%sum_7 = fadd float %sum_6, %tmp_12_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 271 'fadd' 'sum_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 7.25>
+ST_43 : Operation 272 [3/5] (7.25ns)   --->   "%sum_7 = fadd float %sum_6, %tmp_12_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 272 'fadd' 'sum_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 7.25>
+ST_44 : Operation 273 [2/5] (7.25ns)   --->   "%sum_7 = fadd float %sum_6, %tmp_12_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 273 'fadd' 'sum_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 14.5>
+ST_45 : Operation 274 [1/5] (7.25ns)   --->   "%sum_7 = fadd float %sum_6, %tmp_12_7" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 274 'fadd' 'sum_7' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 275 [5/5] (7.25ns)   --->   "%sum_8 = fadd float %sum_7, %tmp_12_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 275 'fadd' 'sum_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 7.25>
+ST_46 : Operation 276 [4/5] (7.25ns)   --->   "%sum_8 = fadd float %sum_7, %tmp_12_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 276 'fadd' 'sum_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 7.25>
+ST_47 : Operation 277 [3/5] (7.25ns)   --->   "%sum_8 = fadd float %sum_7, %tmp_12_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 277 'fadd' 'sum_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 7.25>
+ST_48 : Operation 278 [2/5] (7.25ns)   --->   "%sum_8 = fadd float %sum_7, %tmp_12_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 278 'fadd' 'sum_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 14.5>
+ST_49 : Operation 279 [1/5] (7.25ns)   --->   "%sum_8 = fadd float %sum_7, %tmp_12_8" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 279 'fadd' 'sum_8' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 280 [5/5] (7.25ns)   --->   "%sum_9 = fadd float %sum_8, %tmp_12_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 280 'fadd' 'sum_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 14.5>
+ST_50 : Operation 281 [4/5] (7.25ns)   --->   "%sum_9 = fadd float %sum_8, %tmp_12_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 281 'fadd' 'sum_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 14.5>
+ST_51 : Operation 282 [3/5] (7.25ns)   --->   "%sum_9 = fadd float %sum_8, %tmp_12_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 282 'fadd' 'sum_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 14.5>
+ST_52 : Operation 283 [2/5] (7.25ns)   --->   "%sum_9 = fadd float %sum_8, %tmp_12_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 283 'fadd' 'sum_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 14.5>
+ST_53 : Operation 284 [1/5] (7.25ns)   --->   "%sum_9 = fadd float %sum_8, %tmp_12_9" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 284 'fadd' 'sum_9' <Predicate = (!tmp_7_4)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 285 [1/1] (0.00ns)   --->   "br label %rbf_kernel_.exit.0" [rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56]   --->   Operation 285 'br' <Predicate = (!tmp_7_4)> <Delay = 0.00>
+
+State 54 <SV = 29> <Delay = 0.00>
+ST_54 : Operation 286 [1/1] (0.00ns)   --->   "ret float %sum_3_out" [rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56]   --->   Operation 286 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('sum_0_i', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) with incoming values : ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [5]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i_0_i2', rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56) with incoming values : ('i_1_9', rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56) [6]  (0 ns)
+	'getelementptr' operation ('temp_buf_addr', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [11]  (0 ns)
+	'load' operation ('temp_buf_load', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) on array 'temp_buf' [12]  (3.25 ns)
+
+ <State 3>: 4.98ns
+The critical path consists of the following:
+	'add' operation ('i_1_1', rbf_kernel/top.cpp:68->rbf_kernel/top.cpp:56) [28]  (1.73 ns)
+	'getelementptr' operation ('temp_buf_addr_2', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [30]  (0 ns)
+	'load' operation ('temp_buf_load_2', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) on array 'temp_buf' [31]  (3.25 ns)
+
+ <State 4>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_1', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [15]  (7.26 ns)
+
+ <State 5>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_1', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [15]  (7.26 ns)
+
+ <State 6>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_1', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [15]  (7.26 ns)
+
+ <State 7>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_1', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [15]  (7.26 ns)
+
+ <State 8>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_1', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [15]  (7.26 ns)
+
+ <State 9>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_11_2', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [34]  (7.26 ns)
+
+ <State 10>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_11_4', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [56]  (7.26 ns)
+
+ <State 11>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_11_6', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [74]  (7.26 ns)
+
+ <State 12>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_11_8', rbf_kernel/top.cpp:72->rbf_kernel/top.cpp:56) [92]  (7.26 ns)
+
+ <State 13>: 7.26ns
+The critical path consists of the following:
+	'phi' operation ('sum_0_i', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) with incoming values : ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [5]  (0 ns)
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 17>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+	'fadd' operation ('sum_1', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [27]  (7.26 ns)
+
+ <State 18>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_1', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [27]  (7.26 ns)
+
+ <State 19>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_1', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [27]  (7.26 ns)
+
+ <State 20>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_1', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [27]  (7.26 ns)
+
+ <State 21>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_1', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [27]  (7.26 ns)
+	'fadd' operation ('sum_2', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [36]  (7.26 ns)
+
+ <State 22>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_2', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [36]  (7.26 ns)
+
+ <State 23>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_2', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [36]  (7.26 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_2', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [36]  (7.26 ns)
+
+ <State 25>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_2', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [36]  (7.26 ns)
+	'fadd' operation ('sum_3_out', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [45]  (7.26 ns)
+
+ <State 26>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_3_out', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [45]  (7.26 ns)
+
+ <State 27>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_3_out', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [45]  (7.26 ns)
+
+ <State 28>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_3_out', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [45]  (7.26 ns)
+
+ <State 29>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_3_out', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [45]  (7.26 ns)
+	'fadd' operation ('sum_4', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [58]  (7.26 ns)
+
+ <State 30>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_4', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [58]  (7.26 ns)
+
+ <State 31>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_4', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [58]  (7.26 ns)
+
+ <State 32>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_4', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [58]  (7.26 ns)
+
+ <State 33>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_4', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [58]  (7.26 ns)
+	'fadd' operation ('sum_5', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [67]  (7.26 ns)
+
+ <State 34>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_5', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [67]  (7.26 ns)
+
+ <State 35>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_5', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [67]  (7.26 ns)
+
+ <State 36>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_5', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [67]  (7.26 ns)
+
+ <State 37>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_5', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [67]  (7.26 ns)
+	'fadd' operation ('sum_6', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [76]  (7.26 ns)
+
+ <State 38>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_6', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [76]  (7.26 ns)
+
+ <State 39>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_6', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [76]  (7.26 ns)
+
+ <State 40>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_6', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [76]  (7.26 ns)
+
+ <State 41>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_6', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [76]  (7.26 ns)
+	'fadd' operation ('sum_7', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [85]  (7.26 ns)
+
+ <State 42>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_7', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [85]  (7.26 ns)
+
+ <State 43>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_7', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [85]  (7.26 ns)
+
+ <State 44>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_7', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [85]  (7.26 ns)
+
+ <State 45>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_7', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [85]  (7.26 ns)
+	'fadd' operation ('sum_8', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [94]  (7.26 ns)
+
+ <State 46>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_8', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [94]  (7.26 ns)
+
+ <State 47>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_8', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [94]  (7.26 ns)
+
+ <State 48>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum_8', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [94]  (7.26 ns)
+
+ <State 49>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_8', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [94]  (7.26 ns)
+	'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [103]  (7.26 ns)
+
+ <State 50>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [103]  (7.26 ns)
+	'phi' operation ('sum_0_i', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) with incoming values : ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [5]  (0 ns)
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 51>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [103]  (7.26 ns)
+	'phi' operation ('sum_0_i', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) with incoming values : ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [5]  (0 ns)
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 52>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [103]  (7.26 ns)
+	'phi' operation ('sum_0_i', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) with incoming values : ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [5]  (0 ns)
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 53>: 14.5ns
+The critical path consists of the following:
+	'fadd' operation ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [103]  (7.26 ns)
+	'phi' operation ('sum_0_i', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) with incoming values : ('sum_9', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [5]  (0 ns)
+	'fadd' operation ('sum', rbf_kernel/top.cpp:73->rbf_kernel/top.cpp:56) [17]  (7.26 ns)
+
+ <State 54>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

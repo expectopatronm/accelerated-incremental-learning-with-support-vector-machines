@@ -1,0 +1,28 @@
+Sources https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass.html
+
+https://scikit-learn.org/stable/modules/classes.html#module-sklearn.datasets
+
+
+1. Breast Cancer - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html#sklearn.datasets.load_breast_cancer
+
+2. MNIST
+
+3. KDD - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_kddcup99.html
+
+4. RVC1 - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_rcv1.html#sklearn.datasets.fetch_rcv1
+
+5. PIMA Indians - https://www.kaggle.com/uciml/pima-indians-diabetes-database
+
+6. CIFAR - 10
+
+7. connect-4 - https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass/connect-4
+
+8. poker - https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass/poker.bz2
+
+9. Olivetti Faces - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_olivetti_faces.html#sklearn.datasets.fetch_olivetti_faces
+
+10. covtype - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_covtype.html#sklearn.datasets.fetch_covtype
+
+11. News 20 - http://qwone.com/~jason/20Newsgroups/
+
+12. Species distribution - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_species_distributions.html#sklearn.datasets.fetch_species_distributions

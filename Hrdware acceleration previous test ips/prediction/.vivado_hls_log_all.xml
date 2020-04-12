@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream.data.V' (prediction/top.cpp:7)." projectName="prediction" solutionName="solution1" date="2019-06-21T01:54:23.492+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'supp_vec_stream.data.V' (prediction/top.cpp:7)." projectName="prediction" solutionName="solution1" date="2019-06-21T01:54:23.394+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'dual_coef_stream.data.V' (prediction/top.cpp:7)." projectName="prediction" solutionName="solution1" date="2019-06-21T01:54:23.384+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_stream.data.V' (prediction/top.cpp:7)." projectName="prediction" solutionName="solution1" date="2019-06-21T01:54:23.376+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'predict_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="prediction" solutionName="solution1" date="2019-06-21T01:54:51.401+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'predict_ap_fexp_7_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="prediction" solutionName="solution1" date="2019-06-21T01:54:49.766+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'predict_ap_faddfsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="prediction" solutionName="solution1" date="2019-06-21T01:54:48.256+0200" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,200 @@
+
+
+================================================================
+== Vivado HLS Report for 'rbf_kernel'
+================================================================
+* Date:           Mon Jun 24 13:17:06 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        rbf_kernel
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|    14.512|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  3544|  3544|  3150|  3150| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+------+------+------+------+---------+
+        |                         |                      |   Latency   |   Interval  | Pipeline|
+        |         Instance        |        Module        |  min |  max |  min |  max |   Type  |
+        +-------------------------+----------------------+------+------+------+------+---------+
+        |Loop_LOOP_12_proc_U0     |Loop_LOOP_12_proc     |  3149|  3149|  3149|  3149|   none  |
+        |Block_Rbf_kernel_fun_U0  |Block_Rbf_kernel_fun  |    13|    13|    13|    13|   none  |
+        |Loop_1_proc_U0           |Loop_1_proc           |   394|   394|   394|   394|   none  |
+        +-------------------------+----------------------+------+------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     14|
+|FIFO             |        0|      -|       5|     44|
+|Instance         |        0|     19|    2796|   4042|
+|Memory           |        4|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|     18|
+|Register         |        -|      -|       2|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        4|     19|    2803|   4118|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      8|       2|      7|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+------------------------------+---------+-------+------+------+
+    |            Instance            |            Module            | BRAM_18K| DSP48E|  FF  |  LUT |
+    +--------------------------------+------------------------------+---------+-------+------+------+
+    |Block_Rbf_kernel_fun_U0         |Block_Rbf_kernel_fun          |        0|     10|   553|  1455|
+    |Loop_1_proc_U0                  |Loop_1_proc                   |        0|      0|   166|   245|
+    |Loop_LOOP_12_proc_U0            |Loop_LOOP_12_proc             |        0|      9|  2041|  2302|
+    |rbf_kernel_CONTROL_BUS_s_axi_U  |rbf_kernel_CONTROL_BUS_s_axi  |        0|      0|    36|    40|
+    +--------------------------------+------------------------------+---------+-------+------+------+
+    |Total                           |                              |        0|     19|  2796|  4042|
+    +--------------------------------+------------------------------+---------+-------+------+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +-------------+---------------------+---------+---+----+------+-----+------+-------------+
+    |    Memory   |        Module       | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+---------------------+---------+---+----+------+-----+------+-------------+
+    |temp_buf_U   |rbf_kernel_temp_buf  |        2|  0|   0|   784|   32|     2|        50176|
+    |temp2_buf_U  |rbf_kernel_temp_buf  |        2|  0|   0|   784|   32|     2|        50176|
+    +-------------+---------------------+---------+---+----+------+-----+------+-------------+
+    |Total        |                     |        4|  0|   0|  1568|   64|     4|       100352|
+    +-------------+---------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    +---------------------+---------+---+----+------+-----+---------+
+    |         Name        | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +---------------------+---------+---+----+------+-----+---------+
+    |sum_3_loc_channel_U  |        0|  5|  44|     2|   32|       64|
+    +---------------------+---------+---+----+------+-----+---------+
+    |Total                |        0|  5|  44|     2|   32|       64|
+    +---------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Loop_1_proc_U0_ap_continue       |    and   |      0|  0|   2|           1|           1|
+    |Loop_LOOP_12_proc_U0_ap_start    |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_temp2_buf        |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_temp_buf         |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                          |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_temp2_buf  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_temp_buf   |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      0|  0|  14|           7|           7|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------+----+-----------+-----+-----------+
+    |                 Name                | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_temp2_buf  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_temp_buf   |   9|          2|    1|          2|
+    +-------------------------------------+----+-----------+-----+-----------+
+    |Total                                |  18|          4|    2|          4|
+    +-------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+---+----+-----+-----------+
+    |                 Name                | FF| LUT| Bits| Const Bits|
+    +-------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_temp2_buf  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_temp_buf   |  1|   0|    1|          0|
+    +-------------------------------------+---+----+-----+-----------+
+    |Total                                |  2|   0|    2|          0|
+    +-------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++---------------------------+-----+-----+------------+-------------------+--------------+
+|s_axi_CONTROL_BUS_AWVALID  |  in |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_AWREADY  | out |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_AWADDR   |  in |    4|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_WVALID   |  in |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_WREADY   | out |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_WDATA    |  in |   32|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_WSTRB    |  in |    4|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_ARVALID  |  in |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_ARREADY  | out |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_ARADDR   |  in |    4|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_RVALID   | out |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_RREADY   |  in |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_RDATA    | out |   32|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_RRESP    | out |    2|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_BVALID   | out |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_BREADY   |  in |    1|    s_axi   |    CONTROL_BUS    |  return void |
+|s_axi_CONTROL_BUS_BRESP    | out |    2|    s_axi   |    CONTROL_BUS    |  return void |
+|ap_clk                     |  in |    1| ap_ctrl_hs |     rbf_kernel    | return value |
+|ap_rst_n                   |  in |    1| ap_ctrl_hs |     rbf_kernel    | return value |
+|interrupt                  | out |    1| ap_ctrl_hs |     rbf_kernel    | return value |
+|in_stream1_TDATA           |  in |   32|    axis    | in_stream1_data_V |    pointer   |
+|in_stream1_TKEEP           |  in |    4|    axis    | in_stream1_keep_V |    pointer   |
+|in_stream1_TSTRB           |  in |    4|    axis    | in_stream1_strb_V |    pointer   |
+|in_stream1_TUSER           |  in |    4|    axis    | in_stream1_user_V |    pointer   |
+|in_stream1_TLAST           |  in |    1|    axis    | in_stream1_last_V |    pointer   |
+|in_stream1_TID             |  in |    5|    axis    |  in_stream1_id_V  |    pointer   |
+|in_stream1_TDEST           |  in |    5|    axis    | in_stream1_dest_V |    pointer   |
+|in_stream1_TVALID          |  in |    1|    axis    | in_stream1_dest_V |    pointer   |
+|in_stream1_TREADY          | out |    1|    axis    | in_stream1_dest_V |    pointer   |
+|in_stream2_TDATA           |  in |   32|    axis    | in_stream2_data_V |    pointer   |
+|in_stream2_TKEEP           |  in |    4|    axis    | in_stream2_keep_V |    pointer   |
+|in_stream2_TSTRB           |  in |    4|    axis    | in_stream2_strb_V |    pointer   |
+|in_stream2_TUSER           |  in |    4|    axis    | in_stream2_user_V |    pointer   |
+|in_stream2_TLAST           |  in |    1|    axis    | in_stream2_last_V |    pointer   |
+|in_stream2_TID             |  in |    5|    axis    |  in_stream2_id_V  |    pointer   |
+|in_stream2_TDEST           |  in |    5|    axis    | in_stream2_dest_V |    pointer   |
+|in_stream2_TVALID          |  in |    1|    axis    | in_stream2_dest_V |    pointer   |
+|in_stream2_TREADY          | out |    1|    axis    | in_stream2_dest_V |    pointer   |
+|out_stream_TDATA           | out |   32|    axis    | out_stream_data_V |    pointer   |
+|out_stream_TKEEP           | out |    4|    axis    | out_stream_keep_V |    pointer   |
+|out_stream_TSTRB           | out |    4|    axis    | out_stream_strb_V |    pointer   |
+|out_stream_TUSER           | out |    4|    axis    | out_stream_user_V |    pointer   |
+|out_stream_TLAST           | out |    1|    axis    | out_stream_last_V |    pointer   |
+|out_stream_TID             | out |    5|    axis    |  out_stream_id_V  |    pointer   |
+|out_stream_TDEST           | out |    5|    axis    | out_stream_dest_V |    pointer   |
+|out_stream_TVALID          | out |    1|    axis    | out_stream_dest_V |    pointer   |
+|out_stream_TREADY          |  in |    1|    axis    | out_stream_dest_V |    pointer   |
++---------------------------+-----+-----+------------+-------------------+--------------+
+

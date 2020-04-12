@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)&#xD;&#xA;   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57)." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:33.106+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)&#xD;&#xA;   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57)." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:33.093+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)&#xD;&#xA;   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57)." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:33.079+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)&#xD;&#xA;   between 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57) and 'fadd' operation ('sum', kernel_matrix_tiled/top.cpp:78->kernel_matrix_tiled/top.cpp:57)." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:33.067+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1' (kernel_matrix_tiled/top.cpp:47:17) in function 'kernel_matrix_tiled' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:32.585+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2.1.2' (kernel_matrix_tiled/top.cpp:53:24) in function 'kernel_matrix_tiled' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:32.573+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_in_stream.data.V' (kernel_matrix_tiled/top.cpp:7)." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:32.283+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_index_stream.data.V' (kernel_matrix_tiled/top.cpp:7)." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:32.173+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'kernel_out_stream.data.V' (kernel_matrix_tiled/top.cpp:7)." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:32.161+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'kernel_matrix_tiled_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:58.413+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'kernel_matrix_tiled_ap_fexp_7_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:56.943+0200" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'kernel_matrix_tiled_ap_faddfsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="kernel_matrix_tiled" solutionName="solution1" date="2019-06-20T10:33:55.224+0200" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,686 @@
+
+
+================================================================
+== Vivado HLS Report for 'kernel_matrix'
+================================================================
+* Date:           Tue Jun 11 15:42:17 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        asymmetric_axi_transfer
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.684|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+-------+-------+----------+-----------+-----------+------+----------+
+        |           |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- LOOP_1   |      ?|      ?|      1571|          -|          -|     ?|    no    |
+        | + LOOP_2  |   1568|   1568|         2|          -|          -|   784|    no    |
+        |- LOOP_3   |   1568|   1568|         2|          -|          -|   784|    no    |
+        |- LOOP_4   |      ?|      ?|     14128|          -|          -|     ?|    no    |
+        | + LOOP_5  |   1568|   1568|         2|          -|          -|   784|    no    |
+        | + LOOP_7  |  12544|  12544|        16|          -|          -|   784|    no    |
+        |- LOOP_6   |      ?|      ?|         3|          -|          -|     ?|    no    |
+        +-----------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 43
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	6  / (!tmp_8)
+	4  / (tmp_8)
+4 --> 
+	5  / (!exitcond2)
+	2  / (exitcond2)
+5 --> 
+	4  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / (!exitcond1)
+	9  / (exitcond1)
+8 --> 
+	7  / true
+9 --> 
+	10  / (!exitcond6)
+	41  / (exitcond6)
+10 --> 
+	11  / (!exitcond)
+	12  / (exitcond)
+11 --> 
+	10  / true
+12 --> 
+	13  / (!tmp_i)
+	28  / (tmp_i)
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	12  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	9  / true
+41 --> 
+	42  / (!exitcond3)
+42 --> 
+	43  / true
+43 --> 
+	41  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %in_stream_data_V), !map !55"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream_keep_V), !map !59"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream_strb_V), !map !63"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %in_stream_user_V), !map !67"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %in_stream_last_V), !map !71"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %in_stream_id_V), !map !75"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %in_stream_dest_V), !map !79"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_stream_data_V), !map !83"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_stream_keep_V), !map !87"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_stream_strb_V), !map !91"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i4* %out_stream_user_V), !map !95"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %out_stream_last_V), !map !99"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %out_stream_id_V), !map !103"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i5* %out_stream_dest_V), !map !107"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %my_index), !map !111"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %length_x), !map !115"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @kernel_matrix_str) nounwind"   --->   Operation 60 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%input_buf = alloca [78400 x float], align 4" [asymmetric_axi_transfer/top.cpp:23]   --->   Operation 61 'alloca' 'input_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM_1P_LUTRAM">   --->   Core 43 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 78400> <RAM>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%temp_buf = alloca [784 x float], align 16" [asymmetric_axi_transfer/top.cpp:25]   --->   Operation 62 'alloca' 'temp_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%temp2_buf = alloca [784 x float], align 16" [asymmetric_axi_transfer/top.cpp:26]   --->   Operation 63 'alloca' 'temp2_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%result_buf = alloca [100 x float], align 16" [asymmetric_axi_transfer/top.cpp:28]   --->   Operation 64 'alloca' 'result_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [12 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [asymmetric_axi_transfer/top.cpp:9]   --->   Operation 65 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %my_index, [10 x i8]* @p_str, i32 1, i32 1, [1 x i8]* @p_str1, i32 0, i32 0, [12 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [asymmetric_axi_transfer/top.cpp:10]   --->   Operation 66 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %length_x, [10 x i8]* @p_str, i32 1, i32 1, [1 x i8]* @p_str1, i32 0, i32 0, [12 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [asymmetric_axi_transfer/top.cpp:11]   --->   Operation 67 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_data_V, i4* %in_stream_keep_V, i4* %in_stream_strb_V, i4* %in_stream_user_V, i1* %in_stream_last_V, i5* %in_stream_id_V, i5* %in_stream_dest_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [asymmetric_axi_transfer/top.cpp:12]   --->   Operation 68 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %out_stream_data_V, i4* %out_stream_keep_V, i4* %out_stream_strb_V, i4* %out_stream_user_V, i1* %out_stream_last_V, i5* %out_stream_id_V, i5* %out_stream_dest_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [asymmetric_axi_transfer/top.cpp:13]   --->   Operation 69 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([78400 x float]* %input_buf, [1 x i8]* @p_str1, [14 x i8]* @p_str5, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [asymmetric_axi_transfer/top.cpp:24]   --->   Operation 70 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (1.76ns)   --->   "br label %1" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 71 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.00>
+ST_2 : Operation 72 [2/2] (1.00ns)   --->   "%length_x_read = call i32 @_ssdm_op_Read.s_axilite.i32P(i32* %length_x)" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 72 'read' 'length_x_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 3 <SV = 2> <Delay = 3.52>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%i = phi i32 [ 0, %0 ], [ %i_1, %5 ]"   --->   Operation 73 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%phi_mul = phi i64 [ 0, %0 ], [ %next_mul, %5 ]"   --->   Operation 74 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_3 = trunc i64 %phi_mul to i18"   --->   Operation 75 'trunc' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (3.52ns)   --->   "%next_mul = add i64 784, %phi_mul"   --->   Operation 76 'add' 'next_mul' <Predicate = true> <Delay = 3.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [1/2] (1.00ns)   --->   "%length_x_read = call i32 @_ssdm_op_Read.s_axilite.i32P(i32* %length_x)" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 77 'read' 'length_x_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_3 : Operation 78 [1/1] (2.47ns)   --->   "%tmp_8 = icmp ult i32 %i, %length_x_read" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 78 'icmp' 'tmp_8' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [1/1] (2.55ns)   --->   "%i_1 = add nsw i32 1, %i" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 79 'add' 'i_1' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "br i1 %tmp_8, label %2, label %.preheader4.preheader" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 80 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str6) nounwind" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 81 'specloopname' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([7 x i8]* @p_str6)" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 82 'specregionbegin' 'tmp_9' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (1.76ns)   --->   "br label %3" [asymmetric_axi_transfer/top.cpp:36]   --->   Operation 83 'br' <Predicate = (tmp_8)> <Delay = 1.76>
+ST_3 : Operation 84 [2/2] (1.00ns)   --->   "%my_index_read = call i32 @_ssdm_op_Read.s_axilite.i32P(i32* %my_index)" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 84 'read' 'my_index_read' <Predicate = (!tmp_8)> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 4 <SV = 3> <Delay = 2.13>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%j = phi i10 [ 0, %2 ], [ %j_1, %4 ]"   --->   Operation 85 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (1.77ns)   --->   "%exitcond2 = icmp eq i10 %j, -240" [asymmetric_axi_transfer/top.cpp:36]   --->   Operation 86 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)"   --->   Operation 87 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (1.73ns)   --->   "%j_1 = add i10 %j, 1" [asymmetric_axi_transfer/top.cpp:36]   --->   Operation 88 'add' 'j_1' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %5, label %4" [asymmetric_axi_transfer/top.cpp:36]   --->   Operation 89 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 90 [2/2] (0.00ns)   --->   "%empty_3 = call { i32, i4, i4, i4, i1, i5, i5 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i4P.i1P.i5P.i5P(i32* %in_stream_data_V, i4* %in_stream_keep_V, i4* %in_stream_strb_V, i4* %in_stream_user_V, i1* %in_stream_last_V, i5* %in_stream_id_V, i5* %in_stream_dest_V)"   --->   Operation 90 'read' 'empty_3' <Predicate = (!exitcond2)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_3_cast = zext i10 %j to i18" [asymmetric_axi_transfer/top.cpp:38]   --->   Operation 91 'zext' 'tmp_3_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (2.13ns)   --->   "%tmp_10 = add i18 %tmp_3, %tmp_3_cast" [asymmetric_axi_transfer/top.cpp:38]   --->   Operation 92 'add' 'tmp_10' <Predicate = (!exitcond2)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([7 x i8]* @p_str6, i32 %tmp_9)" [asymmetric_axi_transfer/top.cpp:40]   --->   Operation 93 'specregionend' 'empty_4' <Predicate = (exitcond2)> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "br label %1" [asymmetric_axi_transfer/top.cpp:35]   --->   Operation 94 'br' <Predicate = (exitcond2)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.56>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str7) nounwind" [asymmetric_axi_transfer/top.cpp:36]   --->   Operation 95 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 96 [1/2] (0.00ns)   --->   "%empty_3 = call { i32, i4, i4, i4, i1, i5, i5 } @_ssdm_op_Read.axis.volatile.i32P.i4P.i4P.i4P.i1P.i5P.i5P(i32* %in_stream_data_V, i4* %in_stream_keep_V, i4* %in_stream_strb_V, i4* %in_stream_user_V, i1* %in_stream_last_V, i5* %in_stream_id_V, i5* %in_stream_dest_V)"   --->   Operation 96 'read' 'empty_3' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%in_stream_data_V_tmp = extractvalue { i32, i4, i4, i4, i1, i5, i5 } %empty_3, 0"   --->   Operation 97 'extractvalue' 'in_stream_data_V_tmp' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%bitcast = bitcast i32 %in_stream_data_V_tmp to float"   --->   Operation 98 'bitcast' 'bitcast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_12_cast = zext i18 %tmp_10 to i64" [asymmetric_axi_transfer/top.cpp:38]   --->   Operation 99 'zext' 'tmp_12_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%input_buf_addr_1 = getelementptr [78400 x float]* %input_buf, i64 0, i64 %tmp_12_cast" [asymmetric_axi_transfer/top.cpp:38]   --->   Operation 100 'getelementptr' 'input_buf_addr_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (2.56ns)   --->   "store float %bitcast, float* %input_buf_addr_1, align 4" [asymmetric_axi_transfer/top.cpp:38]   --->   Operation 101 'store' <Predicate = true> <Delay = 2.56> <Core = "RAM_1P_LUTRAM">   --->   Core 43 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 78400> <RAM>
+ST_5 : Operation 102 [1/1] (0.00ns)   --->   "br label %3" [asymmetric_axi_transfer/top.cpp:36]   --->   Operation 102 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 7.38>
+ST_6 : Operation 103 [1/2] (1.00ns)   --->   "%my_index_read = call i32 @_ssdm_op_Read.s_axilite.i32P(i32* %my_index)" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 103 'read' 'my_index_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_5 = trunc i32 %my_index_read to i18" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 104 'trunc' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (6.38ns)   --->   "%tmp_s = mul i18 784, %tmp_5" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 105 'mul' 'tmp_s' <Predicate = true> <Delay = 6.38> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 6.38> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 106 [1/1] (1.76ns)   --->   "br label %.preheader4" [asymmetric_axi_transfer/top.cpp:42]   --->   Operation 106 'br' <Predicate = true> <Delay = 1.76>
+
+State 7 <SV = 4> <Delay = 4.70>
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%j1 = phi i10 [ %j_2, %6 ], [ 0, %.preheader4.preheader ]"   --->   Operation 107 'phi' 'j1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 108 [1/1] (1.77ns)   --->   "%exitcond1 = icmp eq i10 %j1, -240" [asymmetric_axi_transfer/top.cpp:42]   --->   Operation 108 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 109 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)"   --->   Operation 109 'speclooptripcount' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 110 [1/1] (1.73ns)   --->   "%j_2 = add i10 %j1, 1" [asymmetric_axi_transfer/top.cpp:42]   --->   Operation 110 'add' 'j_2' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.preheader3.preheader, label %6" [asymmetric_axi_transfer/top.cpp:42]   --->   Operation 111 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i10 %j1 to i18" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 112 'zext' 'tmp_4_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_7 : Operation 113 [1/1] (2.13ns)   --->   "%tmp_11 = add i18 %tmp_s, %tmp_4_cast" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 113 'add' 'tmp_11' <Predicate = (!exitcond1)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_13_cast = sext i18 %tmp_11 to i64" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 114 'sext' 'tmp_13_cast' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "%input_buf_addr = getelementptr [78400 x float]* %input_buf, i64 0, i64 %tmp_13_cast" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 115 'getelementptr' 'input_buf_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_7 : Operation 116 [2/2] (2.56ns)   --->   "%input_buf_load = load float* %input_buf_addr, align 4" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 116 'load' 'input_buf_load' <Predicate = (!exitcond1)> <Delay = 2.56> <Core = "RAM_1P_LUTRAM">   --->   Core 43 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 78400> <RAM>
+ST_7 : Operation 117 [1/1] (1.76ns)   --->   "br label %.preheader3"   --->   Operation 117 'br' <Predicate = (exitcond1)> <Delay = 1.76>
+
+State 8 <SV = 5> <Delay = 5.82>
+ST_8 : Operation 118 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str8) nounwind" [asymmetric_axi_transfer/top.cpp:42]   --->   Operation 118 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_4 = zext i10 %j1 to i64" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 119 'zext' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 120 [1/2] (2.56ns)   --->   "%input_buf_load = load float* %input_buf_addr, align 4" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 120 'load' 'input_buf_load' <Predicate = true> <Delay = 2.56> <Core = "RAM_1P_LUTRAM">   --->   Core 43 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 78400> <RAM>
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%temp_buf_addr = getelementptr inbounds [784 x float]* %temp_buf, i64 0, i64 %tmp_4" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 121 'getelementptr' 'temp_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 122 [1/1] (3.25ns)   --->   "store float %input_buf_load, float* %temp_buf_addr, align 4" [asymmetric_axi_transfer/top.cpp:43]   --->   Operation 122 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "br label %.preheader4" [asymmetric_axi_transfer/top.cpp:42]   --->   Operation 123 'br' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 5> <Delay = 2.93>
+ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%i2 = phi i32 [ %i_3, %rbf_kernel.exit ], [ 0, %.preheader3.preheader ]"   --->   Operation 124 'phi' 'i2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%phi_mul1 = phi i42 [ %next_mul2, %rbf_kernel.exit ], [ 0, %.preheader3.preheader ]"   --->   Operation 125 'phi' 'phi_mul1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%tmp_12 = trunc i42 %phi_mul1 to i18"   --->   Operation 126 'trunc' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 127 [1/1] (2.93ns)   --->   "%next_mul2 = add i42 784, %phi_mul1"   --->   Operation 127 'add' 'next_mul2' <Predicate = true> <Delay = 2.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 128 [1/1] (2.47ns)   --->   "%exitcond6 = icmp eq i32 %i2, %length_x_read" [asymmetric_axi_transfer/top.cpp:46]   --->   Operation 128 'icmp' 'exitcond6' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 129 [1/1] (2.55ns)   --->   "%i_3 = add nsw i32 1, %i2" [asymmetric_axi_transfer/top.cpp:46]   --->   Operation 129 'add' 'i_3' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 130 [1/1] (0.00ns)   --->   "br i1 %exitcond6, label %.preheader.preheader, label %7" [asymmetric_axi_transfer/top.cpp:46]   --->   Operation 130 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 131 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str9) nounwind" [asymmetric_axi_transfer/top.cpp:46]   --->   Operation 131 'specloopname' <Predicate = (!exitcond6)> <Delay = 0.00>
+ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([7 x i8]* @p_str9)" [asymmetric_axi_transfer/top.cpp:46]   --->   Operation 132 'specregionbegin' 'tmp_2' <Predicate = (!exitcond6)> <Delay = 0.00>
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%tmp_7 = sext i32 %i2 to i64" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 133 'sext' 'tmp_7' <Predicate = (!exitcond6)> <Delay = 0.00>
+ST_9 : Operation 134 [1/1] (1.76ns)   --->   "br label %8" [asymmetric_axi_transfer/top.cpp:47]   --->   Operation 134 'br' <Predicate = (!exitcond6)> <Delay = 1.76>
+ST_9 : Operation 135 [1/1] (1.76ns)   --->   "br label %.preheader" [asymmetric_axi_transfer/top.cpp:54]   --->   Operation 135 'br' <Predicate = (exitcond6)> <Delay = 1.76>
+
+State 10 <SV = 6> <Delay = 4.70>
+ST_10 : Operation 136 [1/1] (0.00ns)   --->   "%j3 = phi i10 [ 0, %7 ], [ %j_3, %9 ]"   --->   Operation 136 'phi' 'j3' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 137 [1/1] (1.77ns)   --->   "%exitcond = icmp eq i10 %j3, -240" [asymmetric_axi_transfer/top.cpp:47]   --->   Operation 137 'icmp' 'exitcond' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 138 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)"   --->   Operation 138 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 139 [1/1] (1.73ns)   --->   "%j_3 = add i10 %j3, 1" [asymmetric_axi_transfer/top.cpp:47]   --->   Operation 139 'add' 'j_3' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 140 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.preheader5.preheader, label %9" [asymmetric_axi_transfer/top.cpp:47]   --->   Operation 140 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i10 %j3 to i18" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 141 'zext' 'tmp_1_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_10 : Operation 142 [1/1] (2.13ns)   --->   "%tmp_13 = add i18 %tmp_12, %tmp_1_cast" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 142 'add' 'tmp_13' <Predicate = (!exitcond)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_15_cast = zext i18 %tmp_13 to i64" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 143 'zext' 'tmp_15_cast' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_10 : Operation 144 [1/1] (0.00ns)   --->   "%input_buf_addr_2 = getelementptr [78400 x float]* %input_buf, i64 0, i64 %tmp_15_cast" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 144 'getelementptr' 'input_buf_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_10 : Operation 145 [2/2] (2.56ns)   --->   "%input_buf_load_1 = load float* %input_buf_addr_2, align 4" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 145 'load' 'input_buf_load_1' <Predicate = (!exitcond)> <Delay = 2.56> <Core = "RAM_1P_LUTRAM">   --->   Core 43 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 78400> <RAM>
+ST_10 : Operation 146 [1/1] (1.76ns)   --->   "br label %.preheader5" [asymmetric_axi_transfer/top.cpp:65->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 146 'br' <Predicate = (exitcond)> <Delay = 1.76>
+
+State 11 <SV = 7> <Delay = 5.82>
+ST_11 : Operation 147 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str10) nounwind" [asymmetric_axi_transfer/top.cpp:47]   --->   Operation 147 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_1 = zext i10 %j3 to i64" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 148 'zext' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 149 [1/2] (2.56ns)   --->   "%input_buf_load_1 = load float* %input_buf_addr_2, align 4" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 149 'load' 'input_buf_load_1' <Predicate = true> <Delay = 2.56> <Core = "RAM_1P_LUTRAM">   --->   Core 43 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.56> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 78400> <RAM>
+ST_11 : Operation 150 [1/1] (0.00ns)   --->   "%temp2_buf_addr = getelementptr inbounds [784 x float]* %temp2_buf, i64 0, i64 %tmp_1" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 150 'getelementptr' 'temp2_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 151 [1/1] (3.25ns)   --->   "store float %input_buf_load_1, float* %temp2_buf_addr, align 4" [asymmetric_axi_transfer/top.cpp:48]   --->   Operation 151 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_11 : Operation 152 [1/1] (0.00ns)   --->   "br label %8" [asymmetric_axi_transfer/top.cpp:47]   --->   Operation 152 'br' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 7> <Delay = 5.70>
+ST_12 : Operation 153 [1/1] (0.00ns)   --->   "%sum_i = phi float [ %sum, %10 ], [ 0.000000e+00, %.preheader5.preheader ]"   --->   Operation 153 'phi' 'sum_i' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 154 [1/1] (0.00ns)   --->   "%i_i = phi i10 [ %i_4, %10 ], [ 0, %.preheader5.preheader ]"   --->   Operation 154 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 155 [1/1] (1.77ns)   --->   "%tmp_i = icmp eq i10 %i_i, -240" [asymmetric_axi_transfer/top.cpp:65->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 155 'icmp' 'tmp_i' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 156 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 784, i64 784, i64 784)"   --->   Operation 156 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 157 [1/1] (1.73ns)   --->   "%i_4 = add i10 %i_i, 1" [asymmetric_axi_transfer/top.cpp:65->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 157 'add' 'i_4' <Predicate = true> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 158 [1/1] (0.00ns)   --->   "br i1 %tmp_i, label %rbf_kernel.exit, label %10" [asymmetric_axi_transfer/top.cpp:65->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 158 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 159 [1/1] (0.00ns)   --->   "%tmp_3_i = zext i10 %i_i to i64" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 159 'zext' 'tmp_3_i' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_12 : Operation 160 [1/1] (0.00ns)   --->   "%temp_buf_addr_1 = getelementptr [784 x float]* %temp_buf, i64 0, i64 %tmp_3_i" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 160 'getelementptr' 'temp_buf_addr_1' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_12 : Operation 161 [2/2] (3.25ns)   --->   "%temp_buf_load = load float* %temp_buf_addr_1, align 4" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 161 'load' 'temp_buf_load' <Predicate = (!tmp_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_12 : Operation 162 [1/1] (0.00ns)   --->   "%temp2_buf_addr_1 = getelementptr [784 x float]* %temp2_buf, i64 0, i64 %tmp_3_i" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 162 'getelementptr' 'temp2_buf_addr_1' <Predicate = (!tmp_i)> <Delay = 0.00>
+ST_12 : Operation 163 [2/2] (3.25ns)   --->   "%temp2_buf_load = load float* %temp2_buf_addr_1, align 4" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 163 'load' 'temp2_buf_load' <Predicate = (!tmp_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_12 : Operation 164 [4/4] (5.70ns)   --->   "%tmp_1_i = fmul float %sum_i, 0xBFA99999A0000000" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 164 'fmul' 'tmp_1_i' <Predicate = (tmp_i)> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 8> <Delay = 3.25>
+ST_13 : Operation 165 [1/2] (3.25ns)   --->   "%temp_buf_load = load float* %temp_buf_addr_1, align 4" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 165 'load' 'temp_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_13 : Operation 166 [1/2] (3.25ns)   --->   "%temp2_buf_load = load float* %temp2_buf_addr_1, align 4" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 166 'load' 'temp2_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+
+State 14 <SV = 9> <Delay = 7.25>
+ST_14 : Operation 167 [5/5] (7.25ns)   --->   "%tmp_4_i = fsub float %temp_buf_load, %temp2_buf_load" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 167 'fsub' 'tmp_4_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 10> <Delay = 7.25>
+ST_15 : Operation 168 [4/5] (7.25ns)   --->   "%tmp_4_i = fsub float %temp_buf_load, %temp2_buf_load" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 168 'fsub' 'tmp_4_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 11> <Delay = 7.25>
+ST_16 : Operation 169 [3/5] (7.25ns)   --->   "%tmp_4_i = fsub float %temp_buf_load, %temp2_buf_load" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 169 'fsub' 'tmp_4_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 12> <Delay = 7.25>
+ST_17 : Operation 170 [2/5] (7.25ns)   --->   "%tmp_4_i = fsub float %temp_buf_load, %temp2_buf_load" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 170 'fsub' 'tmp_4_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 13> <Delay = 7.25>
+ST_18 : Operation 171 [1/5] (7.25ns)   --->   "%tmp_4_i = fsub float %temp_buf_load, %temp2_buf_load" [asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 171 'fsub' 'tmp_4_i' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 14> <Delay = 5.70>
+ST_19 : Operation 172 [4/4] (5.70ns)   --->   "%tmp_5_i = fmul float %tmp_4_i, %tmp_4_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 172 'fmul' 'tmp_5_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 15> <Delay = 5.70>
+ST_20 : Operation 173 [3/4] (5.70ns)   --->   "%tmp_5_i = fmul float %tmp_4_i, %tmp_4_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 173 'fmul' 'tmp_5_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 16> <Delay = 5.70>
+ST_21 : Operation 174 [2/4] (5.70ns)   --->   "%tmp_5_i = fmul float %tmp_4_i, %tmp_4_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 174 'fmul' 'tmp_5_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 17> <Delay = 5.70>
+ST_22 : Operation 175 [1/4] (5.70ns)   --->   "%tmp_5_i = fmul float %tmp_4_i, %tmp_4_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 175 'fmul' 'tmp_5_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 18> <Delay = 7.25>
+ST_23 : Operation 176 [5/5] (7.25ns)   --->   "%sum = fadd float %sum_i, %tmp_5_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 176 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 19> <Delay = 7.25>
+ST_24 : Operation 177 [4/5] (7.25ns)   --->   "%sum = fadd float %sum_i, %tmp_5_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 177 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 20> <Delay = 7.25>
+ST_25 : Operation 178 [3/5] (7.25ns)   --->   "%sum = fadd float %sum_i, %tmp_5_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 178 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 21> <Delay = 7.25>
+ST_26 : Operation 179 [2/5] (7.25ns)   --->   "%sum = fadd float %sum_i, %tmp_5_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 179 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 22> <Delay = 7.25>
+ST_27 : Operation 180 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str12) nounwind" [asymmetric_axi_transfer/top.cpp:65->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 180 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 181 [1/5] (7.25ns)   --->   "%sum = fadd float %sum_i, %tmp_5_i" [asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 181 'fadd' 'sum' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 99 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 182 [1/1] (0.00ns)   --->   "br label %.preheader5" [asymmetric_axi_transfer/top.cpp:65->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 182 'br' <Predicate = true> <Delay = 0.00>
+
+State 28 <SV = 8> <Delay = 5.70>
+ST_28 : Operation 183 [3/4] (5.70ns)   --->   "%tmp_1_i = fmul float %sum_i, 0xBFA99999A0000000" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 183 'fmul' 'tmp_1_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 9> <Delay = 5.70>
+ST_29 : Operation 184 [2/4] (5.70ns)   --->   "%tmp_1_i = fmul float %sum_i, 0xBFA99999A0000000" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 184 'fmul' 'tmp_1_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 10> <Delay = 5.70>
+ST_30 : Operation 185 [1/4] (5.70ns)   --->   "%tmp_1_i = fmul float %sum_i, 0xBFA99999A0000000" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 185 'fmul' 'tmp_1_i' <Predicate = true> <Delay = 5.70> <Core = "FMul">   --->   Core 100 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 11> <Delay = 7.68>
+ST_31 : Operation 186 [9/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 186 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 32 <SV = 12> <Delay = 7.68>
+ST_32 : Operation 187 [8/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 187 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 33 <SV = 13> <Delay = 7.68>
+ST_33 : Operation 188 [7/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 188 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 34 <SV = 14> <Delay = 7.68>
+ST_34 : Operation 189 [6/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 189 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 35 <SV = 15> <Delay = 7.68>
+ST_35 : Operation 190 [5/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 190 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 36 <SV = 16> <Delay = 7.68>
+ST_36 : Operation 191 [4/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 191 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 37 <SV = 17> <Delay = 7.68>
+ST_37 : Operation 192 [3/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 192 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 38 <SV = 18> <Delay = 7.68>
+ST_38 : Operation 193 [2/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 193 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 39 <SV = 19> <Delay = 7.68>
+ST_39 : Operation 194 [1/9] (7.68ns)   --->   "%tmp_2_i = call float @llvm.exp.f32(float %tmp_1_i)" [asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50]   --->   Operation 194 'fexp' 'tmp_2_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 121 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+
+State 40 <SV = 20> <Delay = 3.25>
+ST_40 : Operation 195 [1/1] (0.00ns)   --->   "%result_buf_addr = getelementptr inbounds [100 x float]* %result_buf, i64 0, i64 %tmp_7" [asymmetric_axi_transfer/top.cpp:50]   --->   Operation 195 'getelementptr' 'result_buf_addr' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 196 [1/1] (3.25ns)   --->   "store float %tmp_2_i, float* %result_buf_addr, align 4" [asymmetric_axi_transfer/top.cpp:50]   --->   Operation 196 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_40 : Operation 197 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([7 x i8]* @p_str9, i32 %tmp_2)" [asymmetric_axi_transfer/top.cpp:51]   --->   Operation 197 'specregionend' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 198 [1/1] (0.00ns)   --->   "br label %.preheader3" [asymmetric_axi_transfer/top.cpp:46]   --->   Operation 198 'br' <Predicate = true> <Delay = 0.00>
+
+State 41 <SV = 6> <Delay = 5.02>
+ST_41 : Operation 199 [1/1] (0.00ns)   --->   "%os_idx = phi i32 [ %os_idx_2, %11 ], [ 0, %.preheader.preheader ]"   --->   Operation 199 'phi' 'os_idx' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 200 [1/1] (2.47ns)   --->   "%exitcond3 = icmp eq i32 %os_idx, %length_x_read" [asymmetric_axi_transfer/top.cpp:54]   --->   Operation 200 'icmp' 'exitcond3' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 201 [1/1] (2.55ns)   --->   "%os_idx_2 = add nsw i32 %os_idx, 1" [asymmetric_axi_transfer/top.cpp:56]   --->   Operation 201 'add' 'os_idx_2' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 202 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %12, label %11" [asymmetric_axi_transfer/top.cpp:54]   --->   Operation 202 'br' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 203 [1/1] (0.00ns)   --->   "%tmp_6 = sext i32 %os_idx to i64" [asymmetric_axi_transfer/top.cpp:55]   --->   Operation 203 'sext' 'tmp_6' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_41 : Operation 204 [1/1] (0.00ns)   --->   "%result_buf_addr_1 = getelementptr inbounds [100 x float]* %result_buf, i64 0, i64 %tmp_6" [asymmetric_axi_transfer/top.cpp:55]   --->   Operation 204 'getelementptr' 'result_buf_addr_1' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_41 : Operation 205 [2/2] (3.25ns)   --->   "%result_buf_load = load float* %result_buf_addr_1, align 4" [asymmetric_axi_transfer/top.cpp:55]   --->   Operation 205 'load' 'result_buf_load' <Predicate = (!exitcond3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_41 : Operation 206 [1/1] (2.47ns)   --->   "%last_assign = icmp eq i32 %os_idx_2, %length_x_read" [asymmetric_axi_transfer/top.cpp:56]   --->   Operation 206 'icmp' 'last_assign' <Predicate = (!exitcond3)> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 207 [1/1] (0.00ns)   --->   "ret void" [asymmetric_axi_transfer/top.cpp:58]   --->   Operation 207 'ret' <Predicate = (exitcond3)> <Delay = 0.00>
+
+State 42 <SV = 7> <Delay = 3.25>
+ST_42 : Operation 208 [1/2] (3.25ns)   --->   "%result_buf_load = load float* %result_buf_addr_1, align 4" [asymmetric_axi_transfer/top.cpp:55]   --->   Operation 208 'load' 'result_buf_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 100> <RAM>
+ST_42 : Operation 209 [1/1] (0.00ns)   --->   "%tmp = bitcast float %result_buf_load to i32" [asymmetric_axi_transfer/top.cpp:55]   --->   Operation 209 'bitcast' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 210 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i4P.i1P.i5P.i5P(i32* %out_stream_data_V, i4* %out_stream_keep_V, i4* %out_stream_strb_V, i4* %out_stream_user_V, i1* %out_stream_last_V, i5* %out_stream_id_V, i5* %out_stream_dest_V, i32 %tmp, i4 -1, i4 -1, i4 0, i1 %last_assign, i5 0, i5 0)" [asymmetric_axi_transfer/top.cpp:55]   --->   Operation 210 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 43 <SV = 8> <Delay = 0.00>
+ST_43 : Operation 211 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str11) nounwind" [asymmetric_axi_transfer/top.cpp:54]   --->   Operation 211 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 212 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i32P.i4P.i4P.i4P.i1P.i5P.i5P(i32* %out_stream_data_V, i4* %out_stream_keep_V, i4* %out_stream_strb_V, i4* %out_stream_user_V, i1* %out_stream_last_V, i5* %out_stream_id_V, i5* %out_stream_dest_V, i32 %tmp, i4 -1, i4 -1, i4 0, i1 %last_assign, i5 0, i5 0)" [asymmetric_axi_transfer/top.cpp:55]   --->   Operation 212 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_43 : Operation 213 [1/1] (0.00ns)   --->   "br label %.preheader" [asymmetric_axi_transfer/top.cpp:54]   --->   Operation 213 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', asymmetric_axi_transfer/top.cpp:35) [46]  (1.77 ns)
+
+ <State 2>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'length_x' (asymmetric_axi_transfer/top.cpp:35) [50]  (1 ns)
+
+ <State 3>: 3.52ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [47]  (0 ns)
+	'add' operation ('next_mul') [49]  (3.52 ns)
+
+ <State 4>: 2.14ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', asymmetric_axi_transfer/top.cpp:36) [59]  (0 ns)
+	'add' operation ('tmp_10', asymmetric_axi_transfer/top.cpp:38) [70]  (2.14 ns)
+
+ <State 5>: 2.57ns
+The critical path consists of the following:
+	axis read on port 'in_stream_data_V' [66]  (0 ns)
+	'store' operation (asymmetric_axi_transfer/top.cpp:38) of variable 'bitcast' on array 'input_buf', asymmetric_axi_transfer/top.cpp:23 [73]  (2.57 ns)
+
+ <State 6>: 7.38ns
+The critical path consists of the following:
+	s_axi read on port 'my_index' (asymmetric_axi_transfer/top.cpp:43) [79]  (1 ns)
+	'mul' operation ('tmp_s', asymmetric_axi_transfer/top.cpp:43) [81]  (6.38 ns)
+
+ <State 7>: 4.7ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', asymmetric_axi_transfer/top.cpp:42) [84]  (0 ns)
+	'add' operation ('tmp_11', asymmetric_axi_transfer/top.cpp:43) [93]  (2.14 ns)
+	'getelementptr' operation ('input_buf_addr', asymmetric_axi_transfer/top.cpp:43) [95]  (0 ns)
+	'load' operation ('input_buf_load', asymmetric_axi_transfer/top.cpp:43) on array 'input_buf', asymmetric_axi_transfer/top.cpp:23 [96]  (2.57 ns)
+
+ <State 8>: 5.82ns
+The critical path consists of the following:
+	'load' operation ('input_buf_load', asymmetric_axi_transfer/top.cpp:43) on array 'input_buf', asymmetric_axi_transfer/top.cpp:23 [96]  (2.57 ns)
+	'store' operation (asymmetric_axi_transfer/top.cpp:43) of variable 'input_buf_load', asymmetric_axi_transfer/top.cpp:43 on array 'input1', asymmetric_axi_transfer/top.cpp:25 [98]  (3.25 ns)
+
+ <State 9>: 2.93ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul1') with incoming values : ('next_mul2') [104]  (0 ns)
+	'add' operation ('next_mul2') [106]  (2.93 ns)
+
+ <State 10>: 4.7ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', asymmetric_axi_transfer/top.cpp:47) [116]  (0 ns)
+	'add' operation ('tmp_13', asymmetric_axi_transfer/top.cpp:48) [125]  (2.14 ns)
+	'getelementptr' operation ('input_buf_addr_2', asymmetric_axi_transfer/top.cpp:48) [127]  (0 ns)
+	'load' operation ('input_buf_load_1', asymmetric_axi_transfer/top.cpp:48) on array 'input_buf', asymmetric_axi_transfer/top.cpp:23 [128]  (2.57 ns)
+
+ <State 11>: 5.82ns
+The critical path consists of the following:
+	'load' operation ('input_buf_load_1', asymmetric_axi_transfer/top.cpp:48) on array 'input_buf', asymmetric_axi_transfer/top.cpp:23 [128]  (2.57 ns)
+	'store' operation (asymmetric_axi_transfer/top.cpp:48) of variable 'input_buf_load_1', asymmetric_axi_transfer/top.cpp:48 on array 'input2', asymmetric_axi_transfer/top.cpp:26 [130]  (3.25 ns)
+
+ <State 12>: 5.7ns
+The critical path consists of the following:
+	'phi' operation ('sum') with incoming values : ('sum', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [135]  (0 ns)
+	'fmul' operation ('tmp_1_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [153]  (5.7 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('temp_buf_load', asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50) on array 'input1', asymmetric_axi_transfer/top.cpp:25 [145]  (3.25 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4_i', asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50) [148]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4_i', asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50) [148]  (7.26 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4_i', asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50) [148]  (7.26 ns)
+
+ <State 17>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4_i', asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50) [148]  (7.26 ns)
+
+ <State 18>: 7.26ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_4_i', asymmetric_axi_transfer/top.cpp:66->asymmetric_axi_transfer/top.cpp:50) [148]  (7.26 ns)
+
+ <State 19>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_5_i', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [149]  (5.7 ns)
+
+ <State 20>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_5_i', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [149]  (5.7 ns)
+
+ <State 21>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_5_i', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [149]  (5.7 ns)
+
+ <State 22>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_5_i', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [149]  (5.7 ns)
+
+ <State 23>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [150]  (7.26 ns)
+
+ <State 24>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [150]  (7.26 ns)
+
+ <State 25>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [150]  (7.26 ns)
+
+ <State 26>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [150]  (7.26 ns)
+
+ <State 27>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', asymmetric_axi_transfer/top.cpp:67->asymmetric_axi_transfer/top.cpp:50) [150]  (7.26 ns)
+
+ <State 28>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [153]  (5.7 ns)
+
+ <State 29>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [153]  (5.7 ns)
+
+ <State 30>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [153]  (5.7 ns)
+
+ <State 31>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 32>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 33>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 34>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 35>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 36>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 37>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 38>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 39>: 7.68ns
+The critical path consists of the following:
+	'fexp' operation ('tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50) [154]  (7.68 ns)
+
+ <State 40>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('result_buf_addr', asymmetric_axi_transfer/top.cpp:50) [155]  (0 ns)
+	'store' operation (asymmetric_axi_transfer/top.cpp:50) of variable 'tmp_2_i', asymmetric_axi_transfer/top.cpp:69->asymmetric_axi_transfer/top.cpp:50 on array 'result_buf', asymmetric_axi_transfer/top.cpp:28 [156]  (3.25 ns)
+
+ <State 41>: 5.03ns
+The critical path consists of the following:
+	'phi' operation ('os_idx') with incoming values : ('os_idx', asymmetric_axi_transfer/top.cpp:56) [162]  (0 ns)
+	'add' operation ('os_idx', asymmetric_axi_transfer/top.cpp:56) [164]  (2.55 ns)
+	'icmp' operation ('last', asymmetric_axi_transfer/top.cpp:56) [172]  (2.47 ns)
+
+ <State 42>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('result_buf_load', asymmetric_axi_transfer/top.cpp:55) on array 'result_buf', asymmetric_axi_transfer/top.cpp:28 [170]  (3.25 ns)
+
+ <State 43>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

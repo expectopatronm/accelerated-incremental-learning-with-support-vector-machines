@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Aug  1 03:20:29 2019
+# Process ID: 33020
+# Current directory: F:/Hardware_Implementation/predict_function_hardware_hls/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: F:/Hardware_Implementation/predict_function_hardware_hls/solution1/impl/ip/vivado.log
+# Journal file: F:/Hardware_Implementation/predict_function_hardware_hls/solution1/impl/ip\vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado2019.1/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'predict_function_ap_faddfsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 299.012 ; gain = 3.863
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'predict_function_ap_faddfsub_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'predict_function_ap_faddfsub_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'predict_function_ap_fexp_7_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 309.195 ; gain = 1.043
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'predict_function_ap_fexp_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'predict_function_ap_fexp_7_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'predict_function_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 315.164 ; gain = 5.969
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'predict_function_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'predict_function_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado2019.1/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Aug  1 03:21:22 2019...
