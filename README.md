@@ -1,5 +1,7 @@
 # Accelerated Incremental Learning with Support vector Machines
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13823475.svg)](https://doi.org/10.5281/zenodo.13823475)
+
 This Thesis aims to investigate the possibility of implementing the SVM algorithm on an embedded SoC
 with changes to the algorithm structure to accommodate learning from large volumes of data in an
 incremental manner with approximations to the computations. The finalized software-only approximated
